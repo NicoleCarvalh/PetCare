@@ -151,7 +151,7 @@
      <x>160</x>
      <y>480</y>
      <width>351</width>
-     <height>101</height>
+     <height>151</height>
     </rect>
    </property>
    <property name="frameShape">
@@ -184,7 +184,7 @@
      <rect>
       <x>10</x>
       <y>30</y>
-      <width>341</width>
+      <width>331</width>
       <height>46</height>
      </rect>
     </property>
@@ -224,6 +224,29 @@
      <string>Esqueceu a senha?</string>
     </property>
    </widget>
+   <widget class="QLabel" name="validation_text">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>341</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#validation_text {
+	color: #DE0A0C;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QFrame" name="email_frame">
    <property name="geometry">
@@ -245,7 +268,7 @@
      <rect>
       <x>10</x>
       <y>40</y>
-      <width>341</width>
+      <width>331</width>
       <height>46</height>
      </rect>
     </property>
@@ -280,53 +303,61 @@
     </property>
    </widget>
   </widget>
-  <widget class="QLabel" name="register_label">
+  <widget class="QFrame" name="frame">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>700</y>
-     <width>251</width>
-     <height>21</height>
+     <x>160</x>
+     <y>650</y>
+     <width>351</width>
+     <height>113</height>
     </rect>
    </property>
-   <property name="font">
-    <font>
-     <family>Tahoma</family>
-     <pointsize>11</pointsize>
-     <weight>50</weight>
-     <bold>false</bold>
-     <underline>true</underline>
-    </font>
+   <property name="minimumSize">
+    <size>
+     <width>351</width>
+     <height>113</height>
+    </size>
    </property>
-   <property name="styleSheet">
-    <string notr="true"/>
+   <property name="maximumSize">
+    <size>
+     <width>351</width>
+     <height>113</height>
+    </size>
    </property>
-   <property name="text">
-    <string>Não possui conta? Cadastre-se</string>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
    </property>
-  </widget>
-  <widget class="QPushButton" name="login_button">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>630</y>
-     <width>341</width>
-     <height>46</height>
-    </rect>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
    </property>
-   <property name="font">
-    <font>
-     <family>Tahoma</family>
-     <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="acceptDrops">
-    <bool>false</bool>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">#login_button {
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QPushButton" name="login_button">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>45</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>1111</width>
+        <height>1111</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Tahoma</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#login_button {
 	background-color: #FFC000;
 	color: #fff;
 	border-radius: 5px;
@@ -335,19 +366,53 @@
 #login_button:hover {
     background-color: #D89E00; 
 }</string>
-   </property>
-   <property name="text">
-    <string>Login</string>
-   </property>
-   <property name="autoDefault">
-    <bool>false</bool>
-   </property>
-   <property name="default">
-    <bool>false</bool>
-   </property>
-   <property name="flat">
-    <bool>false</bool>
-   </property>
+      </property>
+      <property name="text">
+       <string>Login</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+     <widget class="QFrame" name="frame_2">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="register_label">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <pointsize>11</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+           <underline>true</underline>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Não possui conta? Cadastre-se</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources>
