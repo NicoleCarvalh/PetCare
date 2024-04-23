@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="icons">
+    <file>icons/align-justify-on.svg</file>
     <file>icons/clipboard-list.svg</file>
     <file>icons/clipboard-list-on.svg</file>
     <file>icons/align-justify.svg</file>

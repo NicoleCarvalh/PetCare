@@ -26,183 +26,12 @@
    <string>Dialog</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
-   <item row="0" column="0">
-    <widget class="QWidget" name="icon_only_menu" native="true">
-     <layout class="QHBoxLayout" name="horizontalLayout_5">
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout">
-        <property name="leftMargin">
-         <number>10</number>
-        </property>
-        <property name="rightMargin">
-         <number>10</number>
-        </property>
-        <property name="bottomMargin">
-         <number>10</number>
-        </property>
-        <item>
-         <widget class="QPushButton" name="pushButton">
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources/designer-assets.qrc">
-            <normaloff>:/icons/icons/Component 1.svg</normaloff>
-            <normalon>:/icons/icons/icon-on.svg</normalon>:/icons/icons/Component 1.svg</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_3">
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources/designer-assets.qrc">
-            <normaloff>:/icons/icons/clipboard-list.svg</normaloff>
-            <normalon>:/icons/icons/clipboard-list-on.svg</normalon>:/icons/icons/clipboard-list.svg</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_4">
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources/designer-assets.qrc">
-            <normaloff>:/icons/icons/package-open.svg</normaloff>
-            <normalon>:/icons/icons/package-open-on.svg</normalon>:/icons/icons/package-open.svg</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="client_page_button_2">
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources/designer-assets.qrc">
-            <normaloff>:/icons/icons/users.svg</normaloff>
-            <normalon>:/icons/icons/users-on.svg</normalon>:/icons/icons/users.svg</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_2">
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources/designer-assets.qrc">
-            <normaloff>:/icons/icons/shopping-cart.svg</normaloff>
-            <normalon>:/icons/icons/shopping-cart-on.svg</normalon>:/icons/icons/shopping-cart.svg</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <spacer name="verticalSpacer">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>578</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_6">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>40</height>
-           </size>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources/designer-assets.qrc">
-            <normaloff>:/icons/icons/x-square.svg</normaloff>:/icons/icons/x-square.svg</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>30</width>
-            <height>30</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </widget>
-   </item>
    <item row="0" column="1">
     <widget class="QWidget" name="full_menu" native="true">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 192, 0);
+border-radius: 15px;</string>
+     </property>
      <layout class="QGridLayout" name="gridLayout">
       <item row="0" column="0">
        <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -216,7 +45,36 @@
          <number>10</number>
         </property>
         <item>
-         <widget class="QPushButton" name="pushButton_7">
+         <spacer name="verticalSpacer_9">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_12">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>15</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="dashboard_btn_2">
           <property name="minimumSize">
            <size>
             <width>0</width>
@@ -225,9 +83,17 @@
           </property>
           <property name="font">
            <font>
-            <family>Inter</family>
+            <family>Inter Black</family>
             <pointsize>12</pointsize>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: transparent;
+	color: white;
+	text-align: left;
+}
+</string>
           </property>
           <property name="text">
            <string>Dashboard</string>
@@ -255,7 +121,23 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_8">
+         <spacer name="verticalSpacer_13">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>10</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="employees_btn_2">
           <property name="minimumSize">
            <size>
             <width>0</width>
@@ -264,9 +146,17 @@
           </property>
           <property name="font">
            <font>
-            <family>Inter</family>
+            <family>Inter Black</family>
             <pointsize>12</pointsize>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: transparent;
+	color: white;
+	text-align: left;
+}
+</string>
           </property>
           <property name="text">
            <string>Funcionários</string>
@@ -291,7 +181,23 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="stock_page_button">
+         <spacer name="verticalSpacer_14">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>10</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="stock_btn_2">
           <property name="minimumSize">
            <size>
             <width>0</width>
@@ -300,9 +206,17 @@
           </property>
           <property name="font">
            <font>
-            <family>Inter</family>
+            <family>Inter Black</family>
             <pointsize>12</pointsize>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: transparent;
+	color: white;
+	text-align: left;
+}
+</string>
           </property>
           <property name="text">
            <string>Estoque</string>
@@ -327,7 +241,23 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="client_page_button">
+         <spacer name="verticalSpacer_15">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>10</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="client_btn_2">
           <property name="minimumSize">
            <size>
             <width>0</width>
@@ -336,9 +266,17 @@
           </property>
           <property name="font">
            <font>
-            <family>Inter</family>
+            <family>Inter Black</family>
             <pointsize>12</pointsize>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: transparent;
+	color: white;
+	text-align: left;
+}
+</string>
           </property>
           <property name="text">
            <string>Clientes</string>
@@ -363,7 +301,23 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_11">
+         <spacer name="verticalSpacer_16">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>10</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="sales_btn_2">
           <property name="minimumSize">
            <size>
             <width>0</width>
@@ -372,9 +326,17 @@
           </property>
           <property name="font">
            <font>
-            <family>Inter</family>
+            <family>Inter Black</family>
             <pointsize>12</pointsize>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: transparent;
+	color: white;
+	text-align: left;
+}
+</string>
           </property>
           <property name="text">
            <string>Vendas</string>
@@ -415,7 +377,7 @@
          </spacer>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_12">
+         <widget class="QPushButton" name="exit_btn_2">
           <property name="minimumSize">
            <size>
             <width>160</width>
@@ -424,9 +386,12 @@
           </property>
           <property name="font">
            <font>
-            <family>Inter</family>
+            <family>Inter Black</family>
             <pointsize>12</pointsize>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: #ffffff;</string>
           </property>
           <property name="text">
            <string>Exit</string>
@@ -446,6 +411,322 @@
           </property>
           <property name="autoExclusive">
            <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QWidget" name="icon_only_menu" native="true">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 192, 0);
+border-radius: 15px;</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>10</number>
+        </property>
+        <item>
+         <spacer name="verticalSpacer_8">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="dashboard_btn_1">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: transparent;
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/designer-assets.qrc">
+            <normaloff>:/icons/icons/Component 1.svg</normaloff>
+            <normalon>:/icons/icons/icon-on.svg</normalon>:/icons/icons/Component 1.svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>60</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="employees_btn_1">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: transparent;
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/designer-assets.qrc">
+            <normaloff>:/icons/icons/clipboard-list.svg</normaloff>
+            <normalon>:/icons/icons/clipboard-list-on.svg</normalon>:/icons/icons/clipboard-list.svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>60</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="stock_btn_1">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: transparent;
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/designer-assets.qrc">
+            <normaloff>:/icons/icons/package-open.svg</normaloff>
+            <normalon>:/icons/icons/package-open-on.svg</normalon>:/icons/icons/package-open.svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>60</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_10">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_6">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="client_btn_1">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: transparent;
+}
+
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/designer-assets.qrc">
+            <normaloff>:/icons/icons/users.svg</normaloff>
+            <normalon>:/icons/icons/users-on.svg</normalon>:/icons/icons/users.svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>60</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_11">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_7">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="sales_btn_1">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: transparent;
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/designer-assets.qrc">
+            <normaloff>:/icons/icons/shopping-cart.svg</normaloff>
+            <normalon>:/icons/icons/shopping-cart-on.svg</normalon>:/icons/icons/shopping-cart.svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>60</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>578</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="exit_btn_1">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/designer-assets.qrc">
+            <normaloff>:/icons/icons/x-square.svg</normaloff>:/icons/icons/x-square.svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
           </property>
          </widget>
         </item>
@@ -486,7 +767,7 @@
        </spacer>
       </item>
       <item>
-       <widget class="QLabel" name="label">
+       <widget class="QLabel" name="page_title">
         <property name="font">
          <font>
           <family>Inter SemiBold</family>
@@ -519,24 +800,32 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_2">
            <item>
-            <widget class="QPushButton" name="pushButton_13">
+            <widget class="QPushButton" name="change_btn">
              <property name="minimumSize">
               <size>
                <width>0</width>
                <height>35</height>
               </size>
              </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background-color: transparent;
+	cursor: pointer;
+}
+</string>
+             </property>
              <property name="text">
               <string/>
              </property>
              <property name="icon">
               <iconset resource="../resources/designer-assets.qrc">
-               <normaloff>:/icons/icons/align-justify.svg</normaloff>:/icons/icons/align-justify.svg</iconset>
+               <normaloff>:/icons/icons/align-justify-on.svg</normaloff>
+               <normalon>:/icons/icons/align-justify.svg</normalon>:/icons/icons/align-justify-on.svg</iconset>
              </property>
              <property name="iconSize">
               <size>
-               <width>28</width>
-               <height>28</height>
+               <width>35</width>
+               <height>35</height>
               </size>
              </property>
              <property name="checkable">
@@ -560,17 +849,26 @@
            <item>
             <layout class="QHBoxLayout" name="horizontalLayout">
              <item>
-              <widget class="QLineEdit" name="lineEdit">
+              <widget class="QLineEdit" name="search_input">
                <property name="minimumSize">
                 <size>
-                 <width>0</width>
+                 <width>300</width>
                  <height>35</height>
                 </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Inter</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="placeholderText">
+                <string>   Pesquisar</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_15">
+              <widget class="QPushButton" name="search_btn">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -582,6 +880,12 @@
                  <family>Inter</family>
                 </font>
                </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    background-color: transparent;
+}
+</string>
+               </property>
                <property name="text">
                 <string/>
                </property>
@@ -591,8 +895,8 @@
                </property>
                <property name="iconSize">
                 <size>
-                 <width>25</width>
-                 <height>25</height>
+                 <width>30</width>
+                 <height>30</height>
                 </size>
                </property>
               </widget>
@@ -616,15 +920,22 @@
             <widget class="QPushButton" name="pushButton_14">
              <property name="minimumSize">
               <size>
-               <width>120</width>
+               <width>165</width>
                <height>40</height>
               </size>
              </property>
              <property name="font">
               <font>
-               <family>Inter</family>
+               <family>Inter SemiBold</family>
                <pointsize>12</pointsize>
               </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+	background-color: #C9ECA0;
+	border-radius: 8px;
+}
+</string>
              </property>
              <property name="text">
               <string>Exportar</string>
@@ -636,13 +947,104 @@
         </layout>
        </widget>
       </item>
-      <item>
+      <item alignment="Qt::AlignHCenter">
        <widget class="QStackedWidget" name="stackedWidget">
-        <property name="currentIndex">
-         <number>0</number>
+        <property name="minimumSize">
+         <size>
+          <width>1120</width>
+          <height>0</height>
+         </size>
         </property>
-        <widget class="QWidget" name="page"/>
-        <widget class="QWidget" name="page_2"/>
+        <property name="font">
+         <font>
+          <family>Inter</family>
+          <pointsize>35</pointsize>
+         </font>
+        </property>
+        <property name="currentIndex">
+         <number>4</number>
+        </property>
+        <widget class="QWidget" name="page">
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="0" alignment="Qt::AlignHCenter">
+           <widget class="QLabel" name="label">
+            <property name="font">
+             <font>
+              <family>Inter</family>
+              <pointsize>35</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>DASHBOARD</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page_2">
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="0" column="0" alignment="Qt::AlignHCenter">
+           <widget class="QLabel" name="label_2">
+            <property name="font">
+             <font>
+              <family>Inter</family>
+              <pointsize>35</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>FUNCIONÁRIOS</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page_3">
+         <layout class="QGridLayout" name="gridLayout_5">
+          <item row="0" column="0" alignment="Qt::AlignHCenter">
+           <widget class="QLabel" name="label_3">
+            <property name="font">
+             <font>
+              <family>Inter</family>
+              <pointsize>35</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>ESTOQUE</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page_4">
+         <widget class="QLabel" name="label_4">
+          <property name="geometry">
+           <rect>
+            <x>400</x>
+            <y>340</y>
+            <width>241</width>
+            <height>71</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>CLIENTES</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_5">
+         <widget class="QLabel" name="label_5">
+          <property name="geometry">
+           <rect>
+            <x>490</x>
+            <y>350</y>
+            <width>261</width>
+            <height>101</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>VENDAS</string>
+          </property>
+         </widget>
+        </widget>
        </widget>
       </item>
      </layout>
@@ -655,34 +1057,194 @@
  </resources>
  <connections>
   <connection>
-   <sender>pushButton_13</sender>
+   <sender>change_btn</sender>
    <signal>toggled(bool)</signal>
    <receiver>icon_only_menu</receiver>
    <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>462</x>
-     <y>102</y>
+     <x>372</x>
+     <y>97</y>
     </hint>
     <hint type="destinationlabel">
-     <x>159</x>
-     <y>265</y>
+     <x>100</x>
+     <y>274</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_13</sender>
+   <sender>change_btn</sender>
    <signal>toggled(bool)</signal>
    <receiver>full_menu</receiver>
    <slot>setHidden(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>401</x>
-     <y>102</y>
+     <x>353</x>
+     <y>98</y>
     </hint>
     <hint type="destinationlabel">
-     <x>343</x>
-     <y>163</y>
+     <x>299</x>
+     <y>172</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dashboard_btn_1</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>dashboard_btn_2</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>74</x>
+     <y>47</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>176</x>
+     <y>69</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>employees_btn_1</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>employees_btn_2</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>79</x>
+     <y>116</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>168</x>
+     <y>114</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>stock_btn_1</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>stock_btn_2</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>57</x>
+     <y>180</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>178</x>
+     <y>181</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>client_btn_1</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>client_btn_2</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>76</x>
+     <y>223</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>195</x>
+     <y>256</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sales_btn_1</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>sales_btn_2</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>75</x>
+     <y>288</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>179</x>
+     <y>323</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dashboard_btn_2</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>dashboard_btn_1</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>179</x>
+     <y>36</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>79</x>
+     <y>36</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>employees_btn_2</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>employees_btn_1</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>172</x>
+     <y>96</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>72</x>
+     <y>100</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>stock_btn_2</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>stock_btn_1</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>166</x>
+     <y>156</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>75</x>
+     <y>165</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>client_btn_2</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>client_btn_1</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>138</x>
+     <y>225</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>79</x>
+     <y>229</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sales_btn_2</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>sales_btn_1</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>147</x>
+     <y>295</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>81</x>
+     <y>262</y>
     </hint>
    </hints>
   </connection>
