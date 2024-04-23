@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="PetCareConnect">
+    <file>images/PetCareLogin.png</file>
+  </qresource>
+</RCC>
