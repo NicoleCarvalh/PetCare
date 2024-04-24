@@ -108,8 +108,8 @@ border-radius: 15px;</string>
           </property>
           <property name="iconSize">
            <size>
-            <width>45</width>
-            <height>45</height>
+            <width>50</width>
+            <height>50</height>
            </size>
           </property>
           <property name="checkable">
@@ -171,8 +171,8 @@ border-radius: 15px;</string>
           </property>
           <property name="iconSize">
            <size>
-            <width>45</width>
-            <height>45</height>
+            <width>50</width>
+            <height>50</height>
            </size>
           </property>
           <property name="checkable">
@@ -231,8 +231,8 @@ border-radius: 15px;</string>
           </property>
           <property name="iconSize">
            <size>
-            <width>45</width>
-            <height>45</height>
+            <width>50</width>
+            <height>50</height>
            </size>
           </property>
           <property name="checkable">
@@ -291,8 +291,8 @@ border-radius: 15px;</string>
           </property>
           <property name="iconSize">
            <size>
-            <width>45</width>
-            <height>45</height>
+            <width>50</width>
+            <height>50</height>
            </size>
           </property>
           <property name="checkable">
@@ -351,8 +351,8 @@ border-radius: 15px;</string>
           </property>
           <property name="iconSize">
            <size>
-            <width>45</width>
-            <height>45</height>
+            <width>50</width>
+            <height>50</height>
            </size>
           </property>
           <property name="checkable">
