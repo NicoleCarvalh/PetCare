@@ -25,6 +25,9 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
   <layout class="QGridLayout" name="gridLayout_2">
    <item row="0" column="1">
     <widget class="QWidget" name="full_menu" native="true">
@@ -84,7 +87,7 @@ border-radius: 15px;</string>
           <property name="font">
            <font>
             <family>Inter Black</family>
-            <pointsize>12</pointsize>
+            <pointsize>14</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -105,8 +108,8 @@ border-radius: 15px;</string>
           </property>
           <property name="iconSize">
            <size>
-            <width>40</width>
-            <height>40</height>
+            <width>45</width>
+            <height>45</height>
            </size>
           </property>
           <property name="checkable">
@@ -147,7 +150,7 @@ border-radius: 15px;</string>
           <property name="font">
            <font>
             <family>Inter Black</family>
-            <pointsize>12</pointsize>
+            <pointsize>14</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -168,8 +171,8 @@ border-radius: 15px;</string>
           </property>
           <property name="iconSize">
            <size>
-            <width>40</width>
-            <height>40</height>
+            <width>45</width>
+            <height>45</height>
            </size>
           </property>
           <property name="checkable">
@@ -207,7 +210,7 @@ border-radius: 15px;</string>
           <property name="font">
            <font>
             <family>Inter Black</family>
-            <pointsize>12</pointsize>
+            <pointsize>14</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -228,8 +231,8 @@ border-radius: 15px;</string>
           </property>
           <property name="iconSize">
            <size>
-            <width>40</width>
-            <height>40</height>
+            <width>45</width>
+            <height>45</height>
            </size>
           </property>
           <property name="checkable">
@@ -267,7 +270,7 @@ border-radius: 15px;</string>
           <property name="font">
            <font>
             <family>Inter Black</family>
-            <pointsize>12</pointsize>
+            <pointsize>14</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -288,8 +291,8 @@ border-radius: 15px;</string>
           </property>
           <property name="iconSize">
            <size>
-            <width>40</width>
-            <height>40</height>
+            <width>45</width>
+            <height>45</height>
            </size>
           </property>
           <property name="checkable">
@@ -327,7 +330,7 @@ border-radius: 15px;</string>
           <property name="font">
            <font>
             <family>Inter Black</family>
-            <pointsize>12</pointsize>
+            <pointsize>14</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -348,8 +351,8 @@ border-radius: 15px;</string>
           </property>
           <property name="iconSize">
            <size>
-            <width>40</width>
-            <height>40</height>
+            <width>45</width>
+            <height>45</height>
            </size>
           </property>
           <property name="checkable">
@@ -724,8 +727,8 @@ border-radius: 15px;</string>
           </property>
           <property name="iconSize">
            <size>
-            <width>30</width>
-            <height>30</height>
+            <width>40</width>
+            <height>40</height>
            </size>
           </property>
          </widget>

@@ -1,6 +1,7 @@
-from PyQt5.QtWidgets import QApplication, QDialog, QFrame, QLabel, QLineEdit
+from PyQt5.QtWidgets import QApplication, QDialog, QFrame, QLabel, QLineEdit, QMessageBox
 from PyQt5 import uic
 from PyQt5.QtGui import QIcon, QFont, QFontDatabase
+from PyQt5.QtCore import pyqtSlot, QFile, QTextStream
 import sys
 
 #TODO design the pages left

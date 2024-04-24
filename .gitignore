@@ -1,2 +1,3 @@
 .venv/
 settingDetails.txt
+.env
