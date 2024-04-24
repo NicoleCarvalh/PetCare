@@ -1,5 +1,6 @@
-from PyQt5.QtWidgets import QApplication, QDialog, QFrame, QLabel, QLineEdit, QMessageBox
-from PyQt5 import uic
+from PyQt5.QtWidgets import QApplication, QDialog, QFrame, QLabel, QLineEdit, QMessageBox, QWidget
+from PyQt5 import uic, QtWidgets
+from PyQt5.uic import loadUi
 from PyQt5.QtGui import QIcon, QFont, QFontDatabase
 from PyQt5.QtCore import pyqtSlot, QFile, QTextStream
 from dotenv import load_dotenv
@@ -14,12 +15,12 @@ class Main(QDialog):
     super(Main, self).__init__()
     
     # Load the Login UI file
-    uic.loadUi("screens/login.ui", self)
+    loadUi("screens/login.ui", self)
     
     # Set window Icon and Title
     self.setWindowTitle("PetCare Connect")
     self.setWindowIcon(QIcon('resources/images/DesktopIcon.png'))
-    self.login_button.clicked.connect(self.login)
+    self.login_button.clicked.connect(self.gotodashboard) #TODO alterar a função para "login" para deploy
 
     ################ FONTS ##################
     # Insert the font into the font database
@@ -56,19 +57,32 @@ class Main(QDialog):
       return
 
     response = verify_credentials(email, password)
-    if response.status_code == 200:
-      self.load_dashboard()
+
+    if response:
+      self.gotodashboard()
     else:
       self.validation_text.setText("E-mail ou senha incorretos.")
 
   # Load the Dashboard UI file
-  def load_dashboard(self):
-    uic.loadUi("screens/dashboard.ui", self) 
-    self.show()
+  def gotodashboard(self):
+    dashboard = Dashboard()
+    widget.addWidget(dashboard)
+    widget.setCurrentIndex(widget.currentIndex()+1)
+
+
+class Dashboard(QDialog):
+  def __init__(self):
+    super(Dashboard, self).__init__()
+    uic.loadUi("screens/dashboard.ui", self)
+
 
 # Initialize App
 if __name__ == "__main__":
   app = QApplication(sys.argv)
   window = Main()
-  window.show()
+  widget = QtWidgets.QStackedWidget()
+  widget.addWidget(window)
+  widget.setFixedHeight(1000)
+  widget.setFixedWidth(1600)
+  widget.show()
   app.exec_()

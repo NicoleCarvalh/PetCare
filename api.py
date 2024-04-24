@@ -11,25 +11,31 @@ def verify_credentials(email, password):
     raise ValueError("API_KEY não encontrada no arquivo .env")
   
   url = f"https://api-petcare.onrender.com/employees?auth={api_key}"
-# url = "https://api-petcare.onrender.com/employees"
   payload = {"email": email, "password": password}
-  response = requests.post(url, json=payload)
+  response = requests.get(url, json=payload)
 
-  if response.status_code == 200:
+  if 'error' in response.json(): 
     # Return data 
-    return response.json()
+    return False
   else:
     # Raise exception if there's an error
-    response.raise_for_status()
+    return True
 
 
-# Example of use
-if __name__ == "__main__":
-  email = "teste@teste.com"
-  password = "123"
+# # Example of use
+# if __name__ == "__main__":
+#   email = "arthur@gmail.com"
+#   password = "123"
 
-  try:
-    data = verify_credentials(email, password)
-    print("Dados do usuário:", data)
-  except Exception as e:
-    print("Erro ao verificar credenciais:", e)
+#   try:
+#     data = verify_credentials(email, password)
+#     print("Dados do usuário:", data)
+#   except Exception as e:
+#     print("Erro ao verificar credenciais:", e)
+
+# if response.status_code == 200:
+#   # Return data 
+#   return response.json()
+# else:
+#   # Raise exception if there's an error
+#   response.raise_for_status()

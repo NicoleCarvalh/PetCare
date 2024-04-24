@@ -103,8 +103,8 @@ border-radius: 15px;</string>
           </property>
           <property name="icon">
            <iconset resource="../resources/designer-assets.qrc">
-            <normaloff>:/icons/icons/Component 1.svg</normaloff>
-            <normalon>:/icons/icons/icon-on.svg</normalon>:/icons/icons/Component 1.svg</iconset>
+            <normaloff>resources/icons/icons/Component 1.svg</normaloff>
+            <normalon>resources/icons/icons/icon-on.svg</normalon>resources/icons/icons/Component 1.svg</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -166,8 +166,8 @@ border-radius: 15px;</string>
           </property>
           <property name="icon">
            <iconset resource="../resources/designer-assets.qrc">
-            <normaloff>:/icons/icons/clipboard-list.svg</normaloff>
-            <normalon>:/icons/icons/clipboard-list-on.svg</normalon>:/icons/icons/clipboard-list.svg</iconset>
+            <normaloff>resources/icons/icons/clipboard-list.svg</normaloff>
+            <normalon>resources/icons/icons/clipboard-list-on.svg</normalon>resources/icons/icons/clipboard-list.svg</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -226,8 +226,8 @@ border-radius: 15px;</string>
           </property>
           <property name="icon">
            <iconset resource="../resources/designer-assets.qrc">
-            <normaloff>:/icons/icons/package-open.svg</normaloff>
-            <normalon>:/icons/icons/package-open-on.svg</normalon>:/icons/icons/package-open.svg</iconset>
+            <normaloff>resources/icons/icons/package-open.svg</normaloff>
+            <normalon>resources/icons/icons/package-open-on.svg</normalon>resources/icons/icons/package-open.svg</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -286,8 +286,8 @@ border-radius: 15px;</string>
           </property>
           <property name="icon">
            <iconset resource="../resources/designer-assets.qrc">
-            <normaloff>:/icons/icons/users.svg</normaloff>
-            <normalon>:/icons/icons/users-on.svg</normalon>:/icons/icons/users.svg</iconset>
+            <normaloff>resources/icons/icons/users.svg</normaloff>
+            <normalon>resources/icons/icons/users-on.svg</normalon>resources/icons/icons/users.svg</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -346,8 +346,8 @@ border-radius: 15px;</string>
           </property>
           <property name="icon">
            <iconset resource="../resources/designer-assets.qrc">
-            <normaloff>:/icons/icons/shopping-cart.svg</normaloff>
-            <normalon>:/icons/icons/shopping-cart-on.svg</normalon>:/icons/icons/shopping-cart.svg</iconset>
+            <normaloff>resources/icons/icons/shopping-cart.svg</normaloff>
+            <normalon>resources/icons/icons/shopping-cart-on.svg</normalon>resources/icons/icons/shopping-cart.svg</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -401,7 +401,7 @@ border-radius: 15px;</string>
           </property>
           <property name="icon">
            <iconset resource="../resources/designer-assets.qrc">
-            <normaloff>:/icons/icons/x-square.svg</normaloff>:/icons/icons/x-square.svg</iconset>
+            <normaloff>resources/icons/icons/x-square.svg</normaloff>resources/icons/icons/x-square.svg</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -469,8 +469,8 @@ border-radius: 15px;</string>
           </property>
           <property name="icon">
            <iconset resource="../resources/designer-assets.qrc">
-            <normaloff>:/icons/icons/Component 1.svg</normaloff>
-            <normalon>:/icons/icons/icon-on.svg</normalon>:/icons/icons/Component 1.svg</iconset>
+            <normaloff>resources/icons/icons/Component 1.svg</normaloff>
+            <normalon>resources/icons/icons/icon-on.svg</normalon>resources/icons/icons/Component 1.svg</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -515,8 +515,8 @@ border-radius: 15px;</string>
           </property>
           <property name="icon">
            <iconset resource="../resources/designer-assets.qrc">
-            <normaloff>:/icons/icons/clipboard-list.svg</normaloff>
-            <normalon>:/icons/icons/clipboard-list-on.svg</normalon>:/icons/icons/clipboard-list.svg</iconset>
+            <normaloff>resources/icons/icons/clipboard-list.svg</normaloff>
+            <normalon>resources/icons/icons/clipboard-list-on.svg</normalon>resources/icons/icons/clipboard-list.svg</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -561,8 +561,8 @@ border-radius: 15px;</string>
           </property>
           <property name="icon">
            <iconset resource="../resources/designer-assets.qrc">
-            <normaloff>:/icons/icons/package-open.svg</normaloff>
-            <normalon>:/icons/icons/package-open-on.svg</normalon>:/icons/icons/package-open.svg</iconset>
+            <normaloff>resources/icons/icons/package-open.svg</normaloff>
+            <normalon>resources/icons/icons/package-open-on.svg</normalon>resources/icons/icons/package-open.svg</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -621,8 +621,8 @@ border-radius: 15px;</string>
           </property>
           <property name="icon">
            <iconset resource="../resources/designer-assets.qrc">
-            <normaloff>:/icons/icons/users.svg</normaloff>
-            <normalon>:/icons/icons/users-on.svg</normalon>:/icons/icons/users.svg</iconset>
+            <normaloff>../resources/icons/icons/users.svg</normaloff>
+            <normalon>../resources/icons/icons/users-on.svg</normalon>../resources/icons/icons/users.svg</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -680,8 +680,8 @@ border-radius: 15px;</string>
           </property>
           <property name="icon">
            <iconset resource="../resources/designer-assets.qrc">
-            <normaloff>:/icons/icons/shopping-cart.svg</normaloff>
-            <normalon>:/icons/icons/shopping-cart-on.svg</normalon>:/icons/icons/shopping-cart.svg</iconset>
+            <normaloff>resources/icons/icons/shopping-cart.svg</normaloff>
+            <normalon>resources/icons/icons/shopping-cart-on.svg</normalon>resources/icons/icons/shopping-cart.svg</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -723,7 +723,7 @@ border-radius: 15px;</string>
           </property>
           <property name="icon">
            <iconset resource="../resources/designer-assets.qrc">
-            <normaloff>:/icons/icons/x-square.svg</normaloff>:/icons/icons/x-square.svg</iconset>
+            <normaloff>resources/icons/icons/x-square.svg</normaloff>resources/icons/icons/x-square.svg</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -813,7 +813,6 @@ border-radius: 15px;</string>
              <property name="styleSheet">
               <string notr="true">QPushButton {
     background-color: transparent;
-	cursor: pointer;
 }
 </string>
              </property>
@@ -822,8 +821,8 @@ border-radius: 15px;</string>
              </property>
              <property name="icon">
               <iconset resource="../resources/designer-assets.qrc">
-               <normaloff>:/icons/icons/align-justify-on.svg</normaloff>
-               <normalon>:/icons/icons/align-justify.svg</normalon>:/icons/icons/align-justify-on.svg</iconset>
+               <normaloff>resources/icons/icons/align-justify-on.svg</normaloff>
+               <normalon>resources/icons/icons/align-justify.svg</normalon>resources/icons/icons/align-justify-on.svg</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -894,7 +893,7 @@ border-radius: 15px;</string>
                </property>
                <property name="icon">
                 <iconset resource="../resources/designer-assets.qrc">
-                 <normaloff>:/icons/icons/search.svg</normaloff>:/icons/icons/search.svg</iconset>
+                 <normaloff>resources/icons/icons/search.svg</normaloff>resources/icons/icons/search.svg</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -965,7 +964,7 @@ border-radius: 15px;</string>
          </font>
         </property>
         <property name="currentIndex">
-         <number>4</number>
+         <number>2</number>
         </property>
         <widget class="QWidget" name="page">
          <layout class="QGridLayout" name="gridLayout_3">
@@ -1028,6 +1027,12 @@ border-radius: 15px;</string>
             <height>71</height>
            </rect>
           </property>
+          <property name="font">
+           <font>
+            <family>Inter</family>
+            <pointsize>30</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>CLIENTES</string>
           </property>
@@ -1042,6 +1047,12 @@ border-radius: 15px;</string>
             <width>261</width>
             <height>101</height>
            </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Inter</family>
+            <pointsize>35</pointsize>
+           </font>
           </property>
           <property name="text">
            <string>VENDAS</string>
