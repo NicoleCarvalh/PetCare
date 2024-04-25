@@ -1,13 +1,14 @@
-from PyQt5 import uic, QtWidgets
-from PyQt5.uic import loadUi
-from PyQt5.QtWidgets import QApplication, QDialog
+from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow
 from PyQt5.QtGui import QIcon, QFont, QFontDatabase
-import sys
+from PyQt5 import uic, QtWidgets
 from api import verify_credentials
+import sys
+
 
 # from PyQt5.QtWidgets import QFrame, QLabel, QLineEdit, QMessageBox, QWidget
 # from PyQt5.QtCore import pyqtSlot, QFile, QTextStream
 # from dotenv import load_dotenv
+# from PyQt5.uic import loadUi
 # import requests
 
 #TODO design the pages left
@@ -17,11 +18,8 @@ class Main(QDialog):
     super(Main, self).__init__()
     
     # Load the Login UI file
-    loadUi("screens/login.ui", self)
-    
-    # Set window Icon and Title
-    self.setWindowTitle("PetCare Connect")
-    self.setWindowIcon(QIcon('resources/images/DesktopIcon.png'))
+    uic.loadUi("screens/login.ui", self)
+
     self.login_button.clicked.connect(self.goToDashboard) #TODO alterar a função para "login" para deploy
 
     # Set Enter keyboard button to login
@@ -30,7 +28,6 @@ class Main(QDialog):
 
     # Set font sizes
     self.setFonts()
-    
 
   def setFonts(self):
     ################ FONTS ##################
@@ -79,12 +76,11 @@ class Main(QDialog):
     widget.addWidget(dashboard)
     widget.setCurrentIndex(widget.currentIndex()+1)
 
-
 class Dashboard(QDialog):
   def __init__(self):
     super(Dashboard, self).__init__()
     uic.loadUi("screens/dashboard.ui", self)
-
+    # uic.loadUi("screens/dashboard-MainWindow.ui", self)
 
 # Initialize App
 if __name__ == "__main__":
@@ -94,5 +90,7 @@ if __name__ == "__main__":
   widget.addWidget(window)
   widget.setFixedHeight(1000)
   widget.setFixedWidth(1600)
+  widget.setWindowIcon(QIcon('resources/images/DesktopIcon.png'))
+  widget.setWindowTitle("PetCare Connect")
   widget.show()
   app.exec_()
