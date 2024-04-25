@@ -220,6 +220,9 @@
       <underline>true</underline>
      </font>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="text">
      <string>Esqueceu a senha?</string>
     </property>
@@ -383,6 +386,9 @@
     </item>
     <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
      <widget class="QFrame" name="frame_2">
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
@@ -415,6 +421,11 @@
    </layout>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>email_input</tabstop>
+  <tabstop>password_input</tabstop>
+  <tabstop>login_button</tabstop>
+ </tabstops>
  <resources>
   <include location="../resources/PetCareConnect.qrc"/>
  </resources>

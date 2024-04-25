@@ -1,12 +1,14 @@
-from PyQt5.QtWidgets import QApplication, QDialog, QFrame, QLabel, QLineEdit, QMessageBox, QWidget
 from PyQt5 import uic, QtWidgets
 from PyQt5.uic import loadUi
+from PyQt5.QtWidgets import QApplication, QDialog
 from PyQt5.QtGui import QIcon, QFont, QFontDatabase
-from PyQt5.QtCore import pyqtSlot, QFile, QTextStream
-from dotenv import load_dotenv
-import requests
 import sys
 from api import verify_credentials
+
+# from PyQt5.QtWidgets import QFrame, QLabel, QLineEdit, QMessageBox, QWidget
+# from PyQt5.QtCore import pyqtSlot, QFile, QTextStream
+# from dotenv import load_dotenv
+# import requests
 
 #TODO design the pages left
 
@@ -20,8 +22,17 @@ class Main(QDialog):
     # Set window Icon and Title
     self.setWindowTitle("PetCare Connect")
     self.setWindowIcon(QIcon('resources/images/DesktopIcon.png'))
-    self.login_button.clicked.connect(self.gotodashboard) #TODO alterar a função para "login" para deploy
+    self.login_button.clicked.connect(self.goToDashboard) #TODO alterar a função para "login" para deploy
 
+    # Set Enter keyboard button to login
+    self.email_input.returnPressed.connect(self.goToDashboard)
+    self.password_input.returnPressed.connect(self.goToDashboard)
+
+    # Set font sizes
+    self.setFonts()
+    
+
+  def setFonts(self):
     ################ FONTS ##################
     # Insert the font into the font database
     font_path = 'resources/fonts/Inter/Inter.ttf'
@@ -45,9 +56,8 @@ class Main(QDialog):
     self.forgot_password.setFont(link_font)  
     self.register_label.setFont(link_font)  
     self.validation_text.setFont(validation_font)
-
     #########################################
-  
+
   def login(self):
     email = self.email_input.text()
     password = self.password_input.text()
@@ -59,12 +69,12 @@ class Main(QDialog):
     response = verify_credentials(email, password)
 
     if response:
-      self.gotodashboard()
+      self.goToDashboard()
     else:
       self.validation_text.setText("E-mail ou senha incorretos.")
 
   # Load the Dashboard UI file
-  def gotodashboard(self):
+  def goToDashboard(self):
     dashboard = Dashboard()
     widget.addWidget(dashboard)
     widget.setCurrentIndex(widget.currentIndex()+1)
