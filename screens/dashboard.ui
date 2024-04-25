@@ -432,7 +432,7 @@ border-radius: 15px;</string>
           <property name="sizeHint" stdset="0">
            <size>
             <width>20</width>
-            <height>15</height>
+            <height>20</height>
            </size>
           </property>
          </spacer>
@@ -1348,6 +1348,22 @@ border-radius: 15px;</string>
     <hint type="destinationlabel">
      <x>91</x>
      <y>401</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>exit_btn_1</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>61</x>
+     <y>952</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>70</x>
+     <y>1006</y>
     </hint>
    </hints>
   </connection>

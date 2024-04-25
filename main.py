@@ -81,10 +81,19 @@ class Dashboard(QDialog):
     super(Dashboard, self).__init__()
     uic.loadUi("screens/dashboard.ui", self)
     # uic.loadUi("screens/dashboard-MainWindow.ui", self)
+    self.icon_only_menu.hide()
+    self.dashboard_btn_2.setChecked(True)
 
 # Initialize App
 if __name__ == "__main__":
   app = QApplication(sys.argv)
+
+  # Loading style file
+  with open("style.qss", "r") as style_file:
+    style_str = style_file.read()
+
+  app.setStyleSheet(style_str)
+
   window = Main()
   widget = QtWidgets.QStackedWidget()
   widget.addWidget(window)
@@ -93,4 +102,4 @@ if __name__ == "__main__":
   widget.setWindowIcon(QIcon('resources/images/DesktopIcon.png'))
   widget.setWindowTitle("PetCare Connect")
   widget.show()
-  app.exec_()
+  sys.exit(app.exec_())
