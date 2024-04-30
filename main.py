@@ -1,11 +1,11 @@
-from PyQt5.QtWidgets import QApplication, QDialog, QPushButton, QMainWindow
-from PyQt5.QtCore import pyqtSlot, QFile, QTextStream
-from PyQt5.QtGui import QIcon, QFont, QFontDatabase
+from PyQt5.QtWidgets import QApplication, QDialog, QLabel
+from PyQt5.QtCore import pyqtSlot, QFile, QTextStream, QUrl
+from PyQt5.QtGui import QIcon, QFont, QFontDatabase, QDesktopServices
 from PyQt5 import uic, QtWidgets
 from api import verify_credentials
 import sys
 
-# from PyQt5.QtWidgets import QFrame, QLabel, QLineEdit, QMessageBox, QWidget
+# from PyQt5.QtWidgets import QFrame, QLabel, QLineEdit, QMessageBox, QWidget, QPushButton, QMainWindow
 # from dotenv import load_dotenv
 # from PyQt5.uic import loadUi
 # import requests
@@ -19,14 +19,18 @@ class Main(QDialog):
     # Load the Login UI file
     uic.loadUi("screens/login.ui", self)
 
+    # Set font sizes
+    self.set_fonts()
+
     self.login_button.clicked.connect(self.go_to_dashboard) #TODO alterar a função para "login" para deploy
 
     # Set Enter keyboard button to login
     self.email_input.returnPressed.connect(self.go_to_dashboard)
     self.password_input.returnPressed.connect(self.go_to_dashboard)
 
-    # Set font sizes
-    self.set_fonts()
+
+    #TODO adicionar links da página de login
+
 
   def set_fonts(self):
     ################ FONTS ##################
@@ -90,6 +94,7 @@ class Dashboard(QDialog):
     if search_text:
       self.label_6.setText(search_text)
 
+  
   # # Changing page to user page
   # def on_user_btn_clicked(self):
   #   self.stackedWidget.setCurrentIndex(6)

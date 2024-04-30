@@ -74,7 +74,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>20</y>
+      <y>30</y>
       <width>781</width>
       <height>971</height>
      </rect>
@@ -206,7 +206,7 @@
      <rect>
       <x>10</x>
       <y>80</y>
-      <width>341</width>
+      <width>161</width>
       <height>21</height>
      </rect>
     </property>
@@ -220,8 +220,19 @@
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
+    <property name="styleSheet">
+     <string notr="true">#forgot_password::hover {
+	color: #389BF2;
+}</string>
+    </property>
     <property name="text">
      <string>Esqueceu a senha?</string>
+    </property>
+    <property name="openExternalLinks">
+     <bool>true</bool>
+    </property>
+    <property name="textInteractionFlags">
+     <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse</set>
     </property>
    </widget>
    <widget class="QLabel" name="validation_text">
@@ -309,19 +320,19 @@
      <x>200</x>
      <y>650</y>
      <width>351</width>
-     <height>113</height>
+     <height>120</height>
     </rect>
    </property>
    <property name="minimumSize">
     <size>
      <width>351</width>
-     <height>113</height>
+     <height>120</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>351</width>
-     <height>113</height>
+     <height>120</height>
     </size>
    </property>
    <property name="frameShape">
@@ -405,10 +416,18 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true"/>
+          <string notr="true">#register_label::hover {
+	color: #389BF2;
+}</string>
          </property>
          <property name="text">
           <string>Não possui conta? Cadastre-se</string>
+         </property>
+         <property name="openExternalLinks">
+          <bool>true</bool>
+         </property>
+         <property name="textInteractionFlags">
+          <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse</set>
          </property>
         </widget>
        </item>

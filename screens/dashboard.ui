@@ -633,9 +633,9 @@ QPushButton#export_btn::hover {
 </string>
         </property>
         <property name="currentIndex">
-         <number>5</number>
+         <number>1</number>
         </property>
-        <widget class="QWidget" name="page">
+        <widget class="QWidget" name="dashboard">
          <layout class="QGridLayout" name="gridLayout_3">
           <item row="0" column="0" alignment="Qt::AlignHCenter">
            <widget class="QLabel" name="label">
@@ -652,9 +652,9 @@ QPushButton#export_btn::hover {
           </item>
          </layout>
         </widget>
-        <widget class="QWidget" name="page_2">
+        <widget class="QWidget" name="employees">
          <layout class="QGridLayout" name="gridLayout_4">
-          <item row="0" column="0" alignment="Qt::AlignHCenter">
+          <item row="1" column="0" alignment="Qt::AlignHCenter">
            <widget class="QLabel" name="label_2">
             <property name="font">
              <font>
@@ -667,9 +667,38 @@ QPushButton#export_btn::hover {
             </property>
            </widget>
           </item>
+          <item row="0" column="0">
+           <widget class="QTableWidget" name="tableWidget">
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <property name="alternatingRowColors">
+             <bool>true</bool>
+            </property>
+            <property name="sortingEnabled">
+             <bool>true</bool>
+            </property>
+            <property name="columnCount">
+             <number>10</number>
+            </property>
+            <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+             <bool>true</bool>
+            </attribute>
+            <column/>
+            <column/>
+            <column/>
+            <column/>
+            <column/>
+            <column/>
+            <column/>
+            <column/>
+            <column/>
+            <column/>
+           </widget>
+          </item>
          </layout>
         </widget>
-        <widget class="QWidget" name="page_3">
+        <widget class="QWidget" name="stock">
          <layout class="QGridLayout" name="gridLayout_5">
           <item row="0" column="0" alignment="Qt::AlignHCenter">
            <widget class="QLabel" name="label_3">
@@ -686,7 +715,7 @@ QPushButton#export_btn::hover {
           </item>
          </layout>
         </widget>
-        <widget class="QWidget" name="page_4">
+        <widget class="QWidget" name="clients">
          <widget class="QLabel" name="label_4">
           <property name="geometry">
            <rect>
@@ -707,7 +736,7 @@ QPushButton#export_btn::hover {
           </property>
          </widget>
         </widget>
-        <widget class="QWidget" name="page_5">
+        <widget class="QWidget" name="sales">
          <widget class="QLabel" name="label_5">
           <property name="geometry">
            <rect>
@@ -728,7 +757,7 @@ QPushButton#export_btn::hover {
           </property>
          </widget>
         </widget>
-        <widget class="QWidget" name="page_6">
+        <widget class="QWidget" name="search_tab">
          <widget class="QLabel" name="label_6">
           <property name="geometry">
            <rect>
