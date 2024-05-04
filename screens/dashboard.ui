@@ -367,6 +367,9 @@ border-radius: 15px;</string>
    </item>
    <item row="0" column="3">
     <widget class="QWidget" name="main_div" native="true">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
      <layout class="QVBoxLayout" name="verticalLayout_5">
       <property name="leftMargin">
        <number>20</number>
@@ -609,6 +612,22 @@ QPushButton#export_btn::hover {
        </widget>
       </item>
       <item>
+       <spacer name="verticalSpacer_17">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>15</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
        <widget class="QStackedWidget" name="stackedWidget">
         <property name="minimumSize">
          <size>
@@ -636,6 +655,9 @@ QPushButton#export_btn::hover {
          <number>1</number>
         </property>
         <widget class="QWidget" name="dashboard">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <layout class="QGridLayout" name="gridLayout_3">
           <item row="0" column="0" alignment="Qt::AlignHCenter">
            <widget class="QLabel" name="label">
@@ -653,6 +675,9 @@ QPushButton#export_btn::hover {
          </layout>
         </widget>
         <widget class="QWidget" name="employees">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <layout class="QGridLayout" name="gridLayout_4">
           <item row="1" column="0" alignment="Qt::AlignHCenter">
            <widget class="QLabel" name="label_2">
@@ -668,9 +693,15 @@ QPushButton#export_btn::hover {
            </widget>
           </item>
           <item row="0" column="0">
-           <widget class="QTableWidget" name="tableWidget">
+           <widget class="QTableWidget" name="employees_table">
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::AdjustToContents</enum>
+            </property>
+            <property name="autoScrollMargin">
+             <number>6</number>
             </property>
             <property name="alternatingRowColors">
              <bool>true</bool>
@@ -679,26 +710,49 @@ QPushButton#export_btn::hover {
              <bool>true</bool>
             </property>
             <property name="columnCount">
-             <number>10</number>
+             <number>6</number>
             </property>
             <attribute name="verticalHeaderShowSortIndicator" stdset="0">
              <bool>true</bool>
             </attribute>
-            <column/>
-            <column/>
-            <column/>
-            <column/>
-            <column/>
-            <column/>
-            <column/>
-            <column/>
-            <column/>
-            <column/>
+            <column>
+             <property name="text">
+              <string>ID</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Nome</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Posição</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>E-mail</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Total de vendas</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Média de vendas/mês</string>
+             </property>
+            </column>
            </widget>
           </item>
          </layout>
         </widget>
         <widget class="QWidget" name="stock">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <layout class="QGridLayout" name="gridLayout_5">
           <item row="0" column="0" alignment="Qt::AlignHCenter">
            <widget class="QLabel" name="label_3">
@@ -716,6 +770,9 @@ QPushButton#export_btn::hover {
          </layout>
         </widget>
         <widget class="QWidget" name="clients">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <widget class="QLabel" name="label_4">
           <property name="geometry">
            <rect>
@@ -737,6 +794,9 @@ QPushButton#export_btn::hover {
          </widget>
         </widget>
         <widget class="QWidget" name="sales">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <widget class="QLabel" name="label_5">
           <property name="geometry">
            <rect>
@@ -758,6 +818,9 @@ QPushButton#export_btn::hover {
          </widget>
         </widget>
         <widget class="QWidget" name="search_tab">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <widget class="QLabel" name="label_6">
           <property name="geometry">
            <rect>

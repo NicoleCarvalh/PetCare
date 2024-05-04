@@ -22,7 +22,7 @@ class Main(QDialog):
     # Set font sizes
     self.set_fonts()
 
-    self.login_button.clicked.connect(self.go_to_dashboard) #TODO alterar a função para "login" para deploy
+    self.login_button.clicked.connect(self.go_to_dashboard) #TODO alterar a função para "login" para deploy // go_to_dashboard para desenvolvimento
 
     # Set Enter keyboard button to login
     self.email_input.returnPressed.connect(self.go_to_dashboard)
@@ -87,6 +87,12 @@ class Dashboard(QDialog):
     self.full_menu.hide()
     self.dashboard_btn_2.setChecked(True)
 
+    # self.setStyleSheet(
+    #   "QStackedWidget {"
+    #   "border-radius: 10px;"
+    #   "}"
+    # )
+
   # Function for searching
   def search(self):
     self.stackedWidget.setCurrentIndex(5)
@@ -129,6 +135,38 @@ class Dashboard(QDialog):
     self.page_title.setText("Funcionários")
     self.search_input.show()
     self.search_btn.show()
+
+    self.setStyleSheet(
+      "QDialog {"
+      "background-color: white;"
+      "}"
+      "QTableWidget {"
+      "border-radius: 10px;"
+      "}"
+      "QTableWidget::item {"
+      "border-bottom: 1px solid gray;"
+      "}"
+      "QTableWidget::item:selected {"
+      "background-color: #b7cde0;" # Altere essa cor para a cor de seleção desejada
+      "}"
+      "QHeaderView::section {"
+      "border-radius: 10px;"
+      "background-color: #d3d3d3;" # Cor de fundo do cabeçalho
+      "}"
+  )
+    
+  # for i in range(rows):
+  #   for j in range(columns):
+  #       item = QTableWidgetItem(f"Item {i+1}-{j+1}")
+  #       self.setItem(i, j, item)
+        
+  #   # Define a cor de fundo para cada outra linha
+  #   if i % 2 == 0:
+  #       for col in range(self.columnCount()):
+  #           self.item(i, col).setBackground(QColor("#f0f0f0"))  # Cor de fundo para linhas pares
+  #   else:
+  #       for col in range(self.columnCount()):
+  #           self.item(i, col).setBackground(QColor("#ffffff"))  # Cor de fundo para linhas ímpares
 
   def on_employees_btn_2_toggled(self):
     self.stackedWidget.setCurrentIndex(1)
