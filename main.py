@@ -87,11 +87,6 @@ class Dashboard(QDialog):
     self.full_menu.hide()
     self.dashboard_btn_2.setChecked(True)
 
-    # self.setStyleSheet(
-    #   "QStackedWidget {"
-    #   "border-radius: 10px;"
-    #   "}"
-    # )
 
   # Function for searching
   def search(self):
@@ -154,19 +149,6 @@ class Dashboard(QDialog):
       "background-color: #d3d3d3;" # Cor de fundo do cabeçalho
       "}"
   )
-    
-  # for i in range(rows):
-  #   for j in range(columns):
-  #       item = QTableWidgetItem(f"Item {i+1}-{j+1}")
-  #       self.setItem(i, j, item)
-        
-  #   # Define a cor de fundo para cada outra linha
-  #   if i % 2 == 0:
-  #       for col in range(self.columnCount()):
-  #           self.item(i, col).setBackground(QColor("#f0f0f0"))  # Cor de fundo para linhas pares
-  #   else:
-  #       for col in range(self.columnCount()):
-  #           self.item(i, col).setBackground(QColor("#ffffff"))  # Cor de fundo para linhas ímpares
 
   def on_employees_btn_2_toggled(self):
     self.stackedWidget.setCurrentIndex(1)
