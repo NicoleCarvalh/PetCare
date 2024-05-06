@@ -86,7 +86,10 @@ class Dashboard(QDialog):
     # uic.loadUi("screens/dashboard-MainWindow.ui", self)
     self.full_menu.hide()
     self.dashboard_btn_2.setChecked(True)
+    self.exit_btn_1.clicked.connect(self.exit_to_login)
 
+  def exit_to_login(self):
+    widget.setCurrentIndex(0)
 
   # Function for searching
   def search(self):
@@ -131,24 +134,25 @@ class Dashboard(QDialog):
     self.search_input.show()
     self.search_btn.show()
 
-    self.setStyleSheet(
-      "QDialog {"
-      "background-color: white;"
-      "}"
-      "QTableWidget {"
-      "border-radius: 10px;"
-      "}"
-      "QTableWidget::item {"
-      "border-bottom: 1px solid gray;"
-      "}"
-      "QTableWidget::item:selected {"
-      "background-color: #b7cde0;" # Altere essa cor para a cor de seleção desejada
-      "}"
-      "QHeaderView::section {"
-      "border-radius: 10px;"
-      "background-color: #d3d3d3;" # Cor de fundo do cabeçalho
-      "}"
-  )
+  #   self.setStyleSheet(
+  #     "QDialog {"
+  #     "background-color: white;"
+  #     "}"
+  #     "QTableWidget {"
+  #     "border-radius: 10px;"
+  #     "background-color: black;"
+  #     "}"
+  #     "QTableWidget::item {"
+  #     "border-bottom: 1px solid gray;"
+  #     "}"
+  #     "QTableWidget::item:selected {"
+  #     "background-color: #b7cde0;" # Altere essa cor para a cor de seleção desejada
+  #     "}"
+  #     "QHeaderView::section {"
+  #     "border-radius: 10px;"
+  #     "background-color: #d3d3d3;" # Cor de fundo do cabeçalho
+  #     "}"
+  # )
 
   def on_employees_btn_2_toggled(self):
     self.stackedWidget.setCurrentIndex(1)
@@ -192,6 +196,7 @@ class Dashboard(QDialog):
     self.search_input.show()
     self.search_btn.show()
     
+  
 # Initialize App
 if __name__ == "__main__":
   app = QApplication(sys.argv)

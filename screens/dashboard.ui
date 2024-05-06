@@ -652,7 +652,7 @@ QPushButton#export_btn::hover {
 </string>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>4</number>
         </property>
         <widget class="QWidget" name="dashboard">
          <property name="styleSheet">
@@ -684,7 +684,7 @@ QPushButton#export_btn::hover {
             <property name="font">
              <font>
               <family>Inter</family>
-              <pointsize>35</pointsize>
+              <pointsize>10</pointsize>
              </font>
             </property>
             <property name="text">
@@ -692,7 +692,7 @@ QPushButton#export_btn::hover {
             </property>
            </widget>
           </item>
-          <item row="0" column="0">
+          <item row="2" column="0">
            <widget class="QTableWidget" name="employees_table">
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
@@ -710,7 +710,7 @@ QPushButton#export_btn::hover {
              <bool>true</bool>
             </property>
             <property name="columnCount">
-             <number>6</number>
+             <number>5</number>
             </property>
             <attribute name="verticalHeaderShowSortIndicator" stdset="0">
              <bool>true</bool>
@@ -718,6 +718,11 @@ QPushButton#export_btn::hover {
             <column>
              <property name="text">
               <string>ID</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Perfil</string>
              </property>
             </column>
             <column>
@@ -735,16 +740,6 @@ QPushButton#export_btn::hover {
               <string>E-mail</string>
              </property>
             </column>
-            <column>
-             <property name="text">
-              <string>Total de vendas</string>
-             </property>
-            </column>
-            <column>
-             <property name="text">
-              <string>Média de vendas/mês</string>
-             </property>
-            </column>
            </widget>
           </item>
          </layout>
@@ -754,12 +749,61 @@ QPushButton#export_btn::hover {
           <string notr="true">background-color: rgb(255, 255, 255);</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_5">
+          <item row="1" column="0">
+           <widget class="QTableWidget" name="stock_table">
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::AdjustToContents</enum>
+            </property>
+            <property name="alternatingRowColors">
+             <bool>true</bool>
+            </property>
+            <property name="sortingEnabled">
+             <bool>true</bool>
+            </property>
+            <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+             <bool>true</bool>
+            </attribute>
+            <column>
+             <property name="text">
+              <string>ID</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Imagem</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Preço Unitário</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Qtd. em Estoque</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Últ. Abastec.</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Status Estoque</string>
+             </property>
+            </column>
+           </widget>
+          </item>
           <item row="0" column="0" alignment="Qt::AlignHCenter">
            <widget class="QLabel" name="label_3">
             <property name="font">
              <font>
               <family>Inter</family>
-              <pointsize>35</pointsize>
+              <pointsize>10</pointsize>
              </font>
             </property>
             <property name="text">
@@ -773,49 +817,73 @@ QPushButton#export_btn::hover {
          <property name="styleSheet">
           <string notr="true">background-color: rgb(255, 255, 255);</string>
          </property>
-         <widget class="QLabel" name="label_4">
-          <property name="geometry">
-           <rect>
-            <x>400</x>
-            <y>340</y>
-            <width>241</width>
-            <height>71</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Inter</family>
-            <pointsize>30</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>CLIENTES</string>
-          </property>
-         </widget>
+         <layout class="QGridLayout" name="gridLayout_6">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_4">
+            <property name="font">
+             <font>
+              <family>Inter</family>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="text">
+             <string>CLIENTES</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QTableWidget" name="client_table">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
         <widget class="QWidget" name="sales">
          <property name="styleSheet">
           <string notr="true">background-color: rgb(255, 255, 255);</string>
          </property>
-         <widget class="QLabel" name="label_5">
-          <property name="geometry">
-           <rect>
-            <x>490</x>
-            <y>350</y>
-            <width>261</width>
-            <height>101</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Inter</family>
-            <pointsize>35</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>VENDAS</string>
-          </property>
-         </widget>
+         <layout class="QGridLayout" name="gridLayout_7">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_5">
+            <property name="font">
+             <font>
+              <family>Inter</family>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>VENDAS</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QTableWidget" name="sales_table">
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
         <widget class="QWidget" name="search_tab">
          <property name="styleSheet">
