@@ -848,6 +848,26 @@ QPushButton#export_btn::hover {
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
+            <column>
+             <property name="text">
+              <string>ID</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Perfil</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Nome</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>E-mail</string>
+             </property>
+            </column>
            </widget>
           </item>
          </layout>
@@ -881,6 +901,43 @@ QPushButton#export_btn::hover {
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
+            <property name="alternatingRowColors">
+             <bool>true</bool>
+            </property>
+            <property name="showGrid">
+             <bool>false</bool>
+            </property>
+            <attribute name="horizontalHeaderVisible">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <column>
+             <property name="text">
+              <string>ID</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Data</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Valor Total</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Meio de Pgto</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Produtos</string>
+             </property>
+            </column>
            </widget>
           </item>
          </layout>
