@@ -196,17 +196,6 @@ class Dashboard(QDialog):
 if __name__ == "__main__":
   app = QApplication(sys.argv)
 
-  # Loading style file
-  # with open("style.qss", "r") as style_file:
-  #   style_str = style_file.read()
-  # app.setStyleSheet(style_str)
-
-  # Loading file example 2
-  # style_file = QFile("C:\Users\nicol\OneDrive\Área de Trabalho\PetCareConnect\style.qss")
-  # style_file.open(QFile.ReadOnly | QFile.Text)
-  # style_stream = QTextStream(style_file)
-  # app.setStyleSheet(style_stream.readAll())
-
   window = Main()
   widget = QtWidgets.QStackedWidget()
   widget.addWidget(window)
