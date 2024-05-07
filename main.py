@@ -173,9 +173,6 @@ class Dashboard(QDialog):
     self.search_btn.show()
 
     #####################################
-    self.verticalHeader().setSectionResizeMode(QHeaderView.Stretch)
-    self.verticalHeader().setDefaultAlignment(Qt.AlignCenter)
-    self.horizontalHeader().setDefaultAlignment(Qt.AlignCenter)
     # Populando a tabela com dados fictícios para teste
     self.populate_table()
 
@@ -198,14 +195,19 @@ class Dashboard(QDialog):
       # Criando o botão "Ver Itens"
       btn_view_items = QPushButton("Ver Itens")
       btn_view_items.setStyleSheet(
-          "background-color: #4CAF50;"  # Cor de fundo verde
-          "border-radius: 15px;"         # Borda arredondada
-          "color: white;"                 # Cor da fonte branca
-          "padding: 5px 5px;"           # Espaçamento interno
-          "font-size: 12px;"              # Tamanho da fonte
-          "font-weight: bold;"            # Negrito
-          "max-width: 80px;"              # Largura mínima do botão
-          "max-height: 20px;"             # Altura mínima do botão
+        "QPushButton {"
+        "   background-color: #389bf2;"
+        "   border-radius: 15px;"
+        "   color: white;"
+        "   padding: 5px 5px;"
+        "   font-size: 12px;"
+        "   font-weight: bold;"
+        "   max-width: 80px;"
+        "   max-height: 20px;"
+        "}"
+        "QPushButton::hover {"
+        "   background-color: #FFBC00;"
+        "}"    
       )
 
       btn_view_items.clicked.connect(self.view_items)
