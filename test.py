@@ -5,7 +5,7 @@ import sys
 class SalesWindow(QDialog):
   def __init__(self):
     super().__init__()
-    loadUi("screens/sales.ui", self)
+    loadUi("layouts/sales.ui", self)
 
     # Populando a tabela com dados fictícios para teste
     self.populate_table()

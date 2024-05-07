@@ -14,13 +14,14 @@ def verify_credentials(email, password):
   payload = {"email": email, "password": password}
   response = requests.get(url, json=payload)
 
-  if 'error' in response.json(): 
+  # print('code' in response)
+
+  if response.status_code == 200: 
     # Return data 
-    return False
+    return True
   else:
     # Raise exception if there's an error
-    return True
-
+    return False
 
 # # Example of use
 # if __name__ == "__main__":
@@ -39,3 +40,11 @@ def verify_credentials(email, password):
 # else:
 #   # Raise exception if there's an error
 #   response.raise_for_status()
+
+###############################################
+# if "code" in response and response["code"]==400 in response.json(): 
+#   # Return data 
+#   return False
+# else:
+#   # Raise exception if there's an error
+#   return True
