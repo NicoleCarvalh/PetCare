@@ -1,10 +1,13 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import QIcon, QFont, QFontDatabase, QDesktopServices
-from PyQt5 import uic, QtWidgets
+from PyQt5 import uic
 from PyQt5.QtGui import QKeyEvent
 from api.api import verify_credentials
 from pages.dashboard_page import DashboardPage
+
+#TODO adicionar links da página de login
+#TODO adicionar loader da página de login
 
 class LoginPage(QDialog):
   def __init__(self, widget):
@@ -30,10 +33,8 @@ class LoginPage(QDialog):
     if event.key() == Qt.Key_Escape:
       event.ignore()
     else:
-      # Keep others' defaulf
+      # Keep others' default
       super().keyPressEvent(event)
-
-    #TODO adicionar links da página de login
 
   def set_fonts(self):
     ################ FONTS ##################

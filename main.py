@@ -1,7 +1,6 @@
 from PyQt5.QtWidgets import *
-from PyQt5.QtCore import pyqtSlot, QFile, QTextStream, QUrl, Qt
-from PyQt5.QtGui import QIcon, QFont, QFontDatabase, QDesktopServices
-from PyQt5 import uic, QtWidgets
+from PyQt5.QtGui import QIcon
+from PyQt5 import QtWidgets
 from pages.login_page import LoginPage
 import sys
 
