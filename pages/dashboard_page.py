@@ -3,7 +3,6 @@ from PyQt5.QtCore import Qt
 from PyQt5 import uic
 from PyQt5.QtGui import QKeyEvent
 # from pages.sales_page import SalesPage
-from api.api import get_sales_list, get_client_name, format_data, format_value, get_product_id_info
 from pages.sales_page import populate_table
 
 class DashboardPage(QDialog):

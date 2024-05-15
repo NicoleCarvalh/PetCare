@@ -3,7 +3,7 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import QIcon, QFont, QFontDatabase, QDesktopServices
 from PyQt5 import uic
 from PyQt5.QtGui import QKeyEvent
-from api.api import verify_credentials
+from api.endpoints.employees import verify_credentials
 from pages.dashboard_page import DashboardPage
 
 #TODO adicionar links da página de login
@@ -91,7 +91,6 @@ class LoginPage(QDialog):
       self.validation_text.setText("E-mail ou senha incorretos.")
       self.loading_bar.setVisible(False)
 
-  # Load Dashboard UI 
   def go_to_dashboard(self):
     dashboard = DashboardPage(self.widget)
     self.widget.addWidget(dashboard)
