@@ -3,7 +3,7 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import QIcon, QFont, QFontDatabase, QDesktopServices
 from PyQt5 import uic
 from PyQt5.QtGui import QKeyEvent
-from api.endpoints.employees import verify_credentials
+from backend.endpoints.employees import verify_credentials
 from pages.dashboard_page import DashboardPage
 
 #TODO adicionar links da página de login

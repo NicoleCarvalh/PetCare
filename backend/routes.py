@@ -15,49 +15,6 @@ clients_url = f"https://api-petcare.onrender.com/clients?auth={api_key}"
 products_url = f"https://api-petcare.onrender.com/products?auth={api_key}"
 
 
-def verify_credentials(email, password):
-  payload = {"email": email, "password": password}
-  response = requests.get(employees_url, json=payload)
-
-  if response.status_code == 200: 
-    return True
-  else:
-    return False
-
-
-
-def get_sales_list():
-  try:
-    response = requests.get(sales_url)
-    data = response.json()
-
-    if response.status_code == 200:
-      # print(data)
-      return data
-    else: 
-      print("Erro ao acessar a API: ", response.status_code)
-  
-  except Exception as e:
-    print("Erro ao acessar API: ", str(e))
-
-
-def get_client_name(client_id):
-  try:
-    response = requests.get(clients_url)
-    data = response.json()
-
-    if response.status_code == 200:
-      for client in data:
-        if client['id'] == client_id:
-          return client['name']
-      
-      print("Cliente não encontrado.")
-  
-  except Exception as e:
-    print("Erro ao acessar API de clientes: ", str(e))
-    return None
-
-
 #TODO arrumar listagem de produtos
 
 def get_product_id_info(product_id):

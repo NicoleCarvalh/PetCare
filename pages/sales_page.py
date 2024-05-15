@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QDialog, QTableWidgetItem, QPushButton, QMessageBox
-from api.api import get_sales_list, get_client_name, format_date, format_value, get_product_id_info
+from backend.routes import get_sales_list, get_client_name, format_date, format_value, get_product_id_info
 
 def populate_table(self):
   sales_data = get_sales_list()
