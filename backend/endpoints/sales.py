@@ -1,4 +1,5 @@
 import requests
+import asyncio
 from backend.routes import sales_url
 
 def get_sales_list():
@@ -14,3 +15,4 @@ def get_sales_list():
   
   except Exception as e:
     print("Erro ao acessar API: ", str(e))
+

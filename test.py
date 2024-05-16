@@ -8,9 +8,9 @@ class SalesWindow(QDialog):
     loadUi("layouts/sales.ui", self)
 
     # Populando a tabela com dados fictícios para teste
-    self.populate_table()
+    self.populate_sales_table()
 
-  def populate_table(self):
+  def populate_sales_table(self):
     # Dados fictícios de vendas (id, cliente, total)
     sales_data = [
       (1, "Cliente 1", 100),

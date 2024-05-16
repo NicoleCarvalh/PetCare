@@ -10,24 +10,10 @@ if not api_key:
 
 # API Endpoints
 employees_url = f"https://api-petcare.onrender.com/employees?auth={api_key}"
-sales_url = f"https://api-petcare.onrender.com/sales?auth={api_key}"
+sales_url = f"https://api-petcare.onrender.com/sales?auth={api_key}&completed=true"
 clients_url = f"https://api-petcare.onrender.com/clients?auth={api_key}"
 products_url = f"https://api-petcare.onrender.com/products?auth={api_key}"
 
-
-#TODO arrumar listagem de produtos
-
-def get_product_id_info(product_id):
-  try:
-    response = requests.get(f"https://api-petcare.onrender.com/products/{product_id}?auth={api_key}")
-
-    if response.status_code == 200:
-      return response.json()
-    else: 
-      print(f"Erro ao obter detalhes do produto {product_id}: ", response.status_code)
-  
-  except Exception as e:
-    print(f"Erro ao obter detalhes do produto {product_id}: ", str(e))
 
 
 ###### UTILS - FORMATAÇÃO ###########

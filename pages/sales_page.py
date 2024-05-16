@@ -1,7 +1,24 @@
 from PyQt5.QtWidgets import QDialog, QTableWidgetItem, QPushButton, QMessageBox
-from backend.routes import get_sales_list, get_client_name, format_date, format_value, get_product_id_info
+from backend.routes import format_date, format_value
+from backend.endpoints.sales import get_sales_list
 
-def populate_table(self):
+
+#TODO arrumar listagem de produtos
+
+
+def populate_sales_table(self):
+  self.stackedWidget.setCurrentIndex(4)
+  self.page_title.setText("Vendas")
+  self.search_input.show()
+  self.search_btn.show()
+
+  self.sales_table.setColumnWidth(0, 80)
+  self.sales_table.setColumnWidth(1, 290)
+  self.sales_table.setColumnWidth(2, 270)
+  self.sales_table.setColumnWidth(3, 250)
+  self.sales_table.setColumnWidth(4, 270)
+  self.sales_table.setColumnWidth(5, 220)
+
   sales_data = get_sales_list()
 
   row_count = len(sales_data)
@@ -11,51 +28,48 @@ def populate_table(self):
   for row, sale in enumerate(sales_data):
   
     self.sales_table.setItem(row, 0, QTableWidgetItem(str(sale['id'])))
-    client_name = get_client_name(sale['client_id'])
-    self.sales_table.setItem(row, 1, QTableWidgetItem(client_name if client_name else "Cliente Desconhecido"))
+    self.sales_table.setItem(row, 1, QTableWidgetItem(str(sale['client']['name'])))
     self.sales_table.setItem(row, 2, QTableWidgetItem(format_date(sale['date_time'])))
     self.sales_table.setItem(row, 3, QTableWidgetItem(format_value(sale['total'])))
     self.sales_table.setItem(row, 4, QTableWidgetItem(str(sale['payment_method'])))
-    self.sales_table.setItem(row, 5, QTableWidgetItem(str(sale['products'])))
-
   
     btn_view_items = QPushButton("Ver Itens")
     btn_view_items.clicked.connect(lambda _, row=row: self.view_items(row))
-    self.sales_table.setCellWidget(row, 5, btn_view_items)  
+    self.sales_table.setCellWidget(row, 5, btn_view_items) 
 
 
 def view_items(self, row):
-  # Recupera o ID da venda da linha clicada
-  sale_id = int(self.sales_table.item(row, 0).text())
+#   # Recupera o ID da venda da linha clicada
+#   sale_id = int(self.sales_table.item(row, 0).text())
 
-  sale = get_sales_list()[row]
+#   sale = get_sales_list()[row]
 
-  items_details = []
+#   items_details = []
 
-  for item in sale['products']:
-    product_id = item['product_id']
+#   for item in sale['products']:
+#     product_id = item['product_id']
     
-    quantity = item['quantity']
+#     quantity = item['quantity']
 
-    product_details = get_product_id_info(product_id)
+#     product_details = get_product_id_info(product_id)
 
-    if product_details:
-        product_name = product_details['name']
+#     if product_details:
+#         product_name = product_details['name']
 
-        unit_price = product_details['price']
+#         unit_price = product_details['price']
         
-        total_price_item = quantity * unit_price
+#         total_price_item = quantity * unit_price
         
-        items_details.append(f"{product_name} - {quantity} unidades - R${total_price_item:.2f}")
-    else:
-        items_details.append(f"Produto não encontrado - ID: {product_id}")
+#         items_details.append(f"{product_name} - {quantity} unidades - R${total_price_item:.2f}")
+#     else:
+#         items_details.append(f"Produto não encontrado - ID: {product_id}")
 
-# Cria uma mensagem com os detalhes dos itens da venda
-  items_text = "\n".join(items_details)
+# # Cria uma mensagem com os detalhes dos itens da venda
+#   items_text = "\n".join(items_details)
 
-  # Cria a janela de diálogo para mostrar os detalhes dos itens da venda
-  items_dialog = QMessageBox()
-  items_dialog.setWindowTitle("Itens da Venda")
-  items_dialog.setText(f"Itens da Venda {sale_id}:\n{items_text}")
-  items_dialog.exec_()
+#   # Cria a janela de diálogo para mostrar os detalhes dos itens da venda
+#   items_dialog = QMessageBox()
+#   items_dialog.setWindowTitle("Itens da Venda")
+#   items_dialog.setText(f"Itens da Venda {sale_id}:\n{items_text}")
+#   items_dialog.exec_()
 
