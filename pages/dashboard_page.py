@@ -84,10 +84,13 @@ class DashboardPage(QDialog):
 
   def on_sales_btn_1_toggled(self):
     self.stackedWidget.setCurrentIndex(4)
+    self.page_title.setText("Vendas")
+    self.search_input.show()
+    self.search_btn.show()
 
-    # populate_sales_table(self)
 
   def on_sales_btn_2_toggled(self):
     self.stackedWidget.setCurrentIndex(4)
-
-    # populate_sales_table(self)
+    self.page_title.setText("Vendas")
+    self.search_input.show()
+    self.search_btn.show()

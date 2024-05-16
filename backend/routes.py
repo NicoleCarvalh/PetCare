@@ -10,7 +10,7 @@ if not api_key:
 
 # API Endpoints
 employees_url = f"https://api-petcare.onrender.com/employees?auth={api_key}"
-sales_url = f"https://api-petcare.onrender.com/sales?auth={api_key}&completed=true"
+sales_url = f"https://api-petcare.onrender.com/sales?completed=true&auth={api_key}"
 clients_url = f"https://api-petcare.onrender.com/clients?auth={api_key}"
 products_url = f"https://api-petcare.onrender.com/products?auth={api_key}"
 
