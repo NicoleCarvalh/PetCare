@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
-from PyQt5.QtGui import QIcon, QFont, QFontDatabase
+from PyQt5.QtGui import QFont, QFontDatabase
 from PyQt5 import uic
 from PyQt5.QtGui import QKeyEvent
 from backend.endpoints.employees import verify_credentials

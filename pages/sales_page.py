@@ -1,9 +1,7 @@
 from PyQt5.QtWidgets import QTableWidgetItem, QPushButton, QMessageBox
-from PyQt5.QtGui import QIcon
+from PyQt5.QtGui import QIcon, QFont
 from backend.routes import format_date, format_value
 from backend.endpoints.sales import get_sales_list
-
-#TODO arrumar listagem de produtos
 
 sales_data = ''
 
@@ -33,13 +31,17 @@ def populate_sales_table(self):
     items_dialog.setText(f"Itens da Venda ID {sale_id}:\n{items_text}")
     items_dialog.exec_()
 
-
-  self.sales_table.setColumnWidth(0, 80)
-  self.sales_table.setColumnWidth(1, 290)
-  self.sales_table.setColumnWidth(2, 270)
-  self.sales_table.setColumnWidth(3, 250)
-  self.sales_table.setColumnWidth(4, 270)
-  self.sales_table.setColumnWidth(5, 220)
+  
+  self.sales_table.setColumnWidth(0, 90)
+  self.sales_table.setColumnWidth(1, 310)
+  self.sales_table.setColumnWidth(2, 300)
+  self.sales_table.setColumnWidth(3, 280)
+  self.sales_table.setColumnWidth(4, 290)
+  self.sales_table.setColumnWidth(5, 110)
+  self.sales_table.setStyleSheet(
+    "alternate-background-color: #F8E7BB;"
+    "background-color: white;"
+  )
 
   sales_data = get_sales_list()
 
@@ -56,5 +58,11 @@ def populate_sales_table(self):
     self.sales_table.setItem(row, 4, QTableWidgetItem(str(sale['payment_method'])))
 
     btn_view_items = QPushButton("Ver Itens")
+    btn_font = QFont('Inter', 8)
+    btn_view_items.setFont(btn_font)
     btn_view_items.clicked.connect(lambda _, row=row: view_items(row))
     self.sales_table.setCellWidget(row, 5, btn_view_items)
+    btn_view_items.setStyleSheet(
+      "background-color: #F8E7BB;"
+    )
+

@@ -9,10 +9,10 @@ if not api_key:
   raise ValueError("API_KEY não encontrada no arquivo .env")
 
 # API Endpoints
-employees_url = f"https://api-petcare.onrender.com/employees?auth={api_key}"
-sales_url = f"https://api-petcare.onrender.com/sales?completed=true&auth={api_key}"
-clients_url = f"https://api-petcare.onrender.com/clients?auth={api_key}"
-products_url = f"https://api-petcare.onrender.com/products?auth={api_key}"
+employees_url = f"https://api-pet-care.vercel.app/employees?auth={api_key}"
+sales_url = f"https://api-pet-care.vercel.app/sales?completed=true&auth={api_key}"
+clients_url = f"https://api-pet-care.vercel.app/clients?auth={api_key}"
+products_url = f"https://api-pet-care.vercel.app/products?auth={api_key}"
 
 
 
