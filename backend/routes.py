@@ -15,7 +15,6 @@ clients_url = f"https://api-pet-care.vercel.app/clients?auth={api_key}"
 products_url = f"https://api-pet-care.vercel.app/products?auth={api_key}"
 
 
-
 ###### UTILS - FORMATAÇÃO ###########
 
 def format_date(date_str):

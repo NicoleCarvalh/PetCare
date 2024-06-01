@@ -4,7 +4,7 @@ from PyQt5 import QtWidgets
 from pages.login_page import LoginPage
 import sys
 
-#TODO design the pages left
+#TODO CRIAR / INSERIR LOADER AO LOGAR
 
 # Initialize App
 if __name__ == "__main__":

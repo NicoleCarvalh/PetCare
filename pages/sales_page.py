@@ -7,7 +7,6 @@ sales_data = ''
 
 def populate_sales_table(self):
   def view_items(row):
-    
     sale_id = int(self.sales_table.item(row, 0).text())
 
     sale = sales_data[row]
@@ -31,7 +30,6 @@ def populate_sales_table(self):
     items_dialog.setText(f"Itens da Venda ID {sale_id}:\n{items_text}")
     items_dialog.exec_()
 
-  
   self.sales_table.setColumnWidth(0, 90)
   self.sales_table.setColumnWidth(1, 310)
   self.sales_table.setColumnWidth(2, 300)
@@ -50,7 +48,6 @@ def populate_sales_table(self):
   self.sales_table.setRowCount(row_count)
 
   for row, sale in enumerate(sales_data):
-
     self.sales_table.setItem(row, 0, QTableWidgetItem(str(sale['id'])))
     self.sales_table.setItem(row, 1, QTableWidgetItem(str(sale['client']['name'])))
     self.sales_table.setItem(row, 2, QTableWidgetItem(format_date(sale['date_time'])))

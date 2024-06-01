@@ -7,7 +7,7 @@ from backend.endpoints.employees import verify_credentials
 from pages.dashboard_page import DashboardPage
 
 #TODO adicionar links da página de login
-#TODO adicionar loader da página de login
+
 
 class WorkerThread(QThread):
   finished = pyqtSignal(bool)  # Sinal para indicar que a tarefa foi concluída

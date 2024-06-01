@@ -1,7 +1,6 @@
 import requests
 from backend.routes import employees_url
 
-
 def verify_credentials(email, password):
   payload = {"email": email, "password": password}
   response = requests.get(employees_url, json=payload)
@@ -10,7 +9,6 @@ def verify_credentials(email, password):
     return True
   else:
     return False
-
 
 def get_employees_list():
   try:

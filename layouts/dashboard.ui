@@ -652,7 +652,7 @@ QPushButton#export_btn::hover {
 </string>
         </property>
         <property name="currentIndex">
-         <number>4</number>
+         <number>2</number>
         </property>
         <widget class="QWidget" name="dashboard">
          <property name="styleSheet">
@@ -679,21 +679,16 @@ QPushButton#export_btn::hover {
           <string notr="true">background-color: rgb(255, 255, 255);</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_4">
-          <item row="1" column="0" alignment="Qt::AlignHCenter">
-           <widget class="QLabel" name="label_2">
+          <item row="1" column="0">
+           <widget class="QTableWidget" name="employees_table">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
             <property name="font">
              <font>
-              <family>Inter</family>
-              <pointsize>10</pointsize>
+              <kerning>false</kerning>
              </font>
             </property>
-            <property name="text">
-             <string>FUNCIONÁRIOS</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QTableWidget" name="employees_table">
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
@@ -703,8 +698,14 @@ QPushButton#export_btn::hover {
             <property name="autoScrollMargin">
              <number>6</number>
             </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
             <property name="alternatingRowColors">
              <bool>true</bool>
+            </property>
+            <property name="showGrid">
+             <bool>false</bool>
             </property>
             <property name="sortingEnabled">
              <bool>true</bool>
@@ -712,9 +713,47 @@ QPushButton#export_btn::hover {
             <property name="columnCount">
              <number>5</number>
             </property>
-            <attribute name="verticalHeaderShowSortIndicator" stdset="0">
-             <bool>true</bool>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
             </attribute>
+            <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+             <bool>false</bool>
+            </attribute>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
             <column>
              <property name="text">
               <string>ID</string>
@@ -749,7 +788,7 @@ QPushButton#export_btn::hover {
           <string notr="true">background-color: rgb(255, 255, 255);</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_5">
-          <item row="1" column="0">
+          <item row="0" column="0">
            <widget class="QTableWidget" name="stock_table">
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
@@ -757,15 +796,24 @@ QPushButton#export_btn::hover {
             <property name="sizeAdjustPolicy">
              <enum>QAbstractScrollArea::AdjustToContents</enum>
             </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
             <property name="alternatingRowColors">
              <bool>true</bool>
             </property>
             <property name="textElideMode">
              <enum>Qt::ElideMiddle</enum>
             </property>
+            <property name="showGrid">
+             <bool>false</bool>
+            </property>
             <property name="sortingEnabled">
              <bool>true</bool>
             </property>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
             <attribute name="verticalHeaderShowSortIndicator" stdset="0">
              <bool>true</bool>
             </attribute>
@@ -776,17 +824,37 @@ QPushButton#export_btn::hover {
             </column>
             <column>
              <property name="text">
+              <string>Cód. Produto</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
               <string>Imagem</string>
              </property>
             </column>
             <column>
              <property name="text">
-              <string>Preço Unitário</string>
+              <string>Nome Produto</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Descrição</string>
              </property>
             </column>
             <column>
              <property name="text">
               <string>Qtd. em Estoque</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Preço de Venda</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Preço de Compra</string>
              </property>
             </column>
             <column>
@@ -801,19 +869,6 @@ QPushButton#export_btn::hover {
             </column>
            </widget>
           </item>
-          <item row="0" column="0" alignment="Qt::AlignHCenter">
-           <widget class="QLabel" name="label_3">
-            <property name="font">
-             <font>
-              <family>Inter</family>
-              <pointsize>10</pointsize>
-             </font>
-            </property>
-            <property name="text">
-             <string>ESTOQUE</string>
-            </property>
-           </widget>
-          </item>
          </layout>
         </widget>
         <widget class="QWidget" name="clients">
@@ -822,38 +877,31 @@ QPushButton#export_btn::hover {
          </property>
          <layout class="QGridLayout" name="gridLayout_6">
           <item row="0" column="0">
-           <widget class="QLabel" name="label_4">
-            <property name="font">
-             <font>
-              <family>Inter</family>
-              <pointsize>10</pointsize>
-             </font>
-            </property>
-            <property name="frameShape">
-             <enum>QFrame::NoFrame</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Plain</enum>
-            </property>
-            <property name="text">
-             <string>CLIENTES</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QTableWidget" name="client_table">
+           <widget class="QTableWidget" name="clients_table">
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
+            <property name="alternatingRowColors">
+             <bool>true</bool>
+            </property>
             <property name="textElideMode">
              <enum>Qt::ElideMiddle</enum>
             </property>
+            <property name="showGrid">
+             <bool>false</bool>
+            </property>
+            <property name="sortingEnabled">
+             <bool>true</bool>
+            </property>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
             <column>
              <property name="text">
               <string>ID</string>
@@ -872,6 +920,21 @@ QPushButton#export_btn::hover {
             <column>
              <property name="text">
               <string>E-mail</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Idade</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Cidade</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Estado</string>
              </property>
             </column>
            </widget>
@@ -909,6 +972,9 @@ QPushButton#export_btn::hover {
             <property name="sizeAdjustPolicy">
              <enum>QAbstractScrollArea::AdjustToContents</enum>
             </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
             <property name="alternatingRowColors">
              <bool>true</bool>
             </property>
@@ -921,8 +987,11 @@ QPushButton#export_btn::hover {
             <property name="showGrid">
              <bool>false</bool>
             </property>
-            <attribute name="horizontalHeaderVisible">
+            <property name="sortingEnabled">
              <bool>true</bool>
+            </property>
+            <attribute name="horizontalHeaderVisible">
+             <bool>false</bool>
             </attribute>
             <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
              <bool>true</bool>
