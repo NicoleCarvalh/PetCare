@@ -8,7 +8,6 @@ def get_sales_list():
     data = response.json()
 
     if response.status_code == 200:
-      # print(data)
       return data
     else: 
       print("Erro ao acessar a API: ", response.status_code)

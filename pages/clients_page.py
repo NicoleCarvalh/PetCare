@@ -2,7 +2,6 @@ from PyQt5.QtWidgets import QTableWidgetItem
 from backend.endpoints.clients import get_clients_list
 from datetime import date, datetime
 
-#TODO arrumar listagem de imagens
 #TODO arrumar IDADES
 
 today = date.today()

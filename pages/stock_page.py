@@ -4,9 +4,6 @@ from backend.routes import format_date, format_value
 from backend.routes import check_status
 from PyQt5.QtGui import QIcon, QPixmap
 
-#TODO arrumar status estoque colorido
-#TODO arrumar listagem de imagens
-
 stock_data = ''
 product_status = ''
 

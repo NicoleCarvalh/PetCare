@@ -1,11 +1,8 @@
 import requests
-from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QIcon, QPixmap
-from PyQt5.QtWidgets import QTableWidgetItem
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
 from backend.endpoints.employees import get_employees_list
-
-
-#TODO arrumar listagem de imagens
 
 employees_data = ''
 
@@ -36,6 +33,7 @@ def populate_employees_table(self):
       icon = QIcon(QPixmap('resources/icons/user.svg'))  
       image_item.setIcon(icon)
       self.employees_table.setItem(row, 1, image_item)
+
     else:
       image_data = requests.get(image_url).content
       with open("downloaded_image.png", "wb") as handler:
