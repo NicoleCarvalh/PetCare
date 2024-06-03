@@ -46,7 +46,6 @@ class DashboardPage(QDialog):
     self.page_title.setText("Dashboard")
     self.search_input.hide()
     self.search_btn.hide()
-    
 
   def on_employees_btn_1_toggled(self):
     self.stackedWidget.setCurrentIndex(1)
@@ -60,7 +59,6 @@ class DashboardPage(QDialog):
     self.search_input.show()
     self.search_btn.show()
 
-
   def on_stock_btn_1_toggled(self):
     self.stackedWidget.setCurrentIndex(2)
     self.page_title.setText("Estoque")
@@ -73,7 +71,6 @@ class DashboardPage(QDialog):
     self.search_input.show()
     self.search_btn.show()
 
-
   def on_clients_btn_1_toggled(self):
     self.stackedWidget.setCurrentIndex(3)
     self.page_title.setText("Clientes")
@@ -85,7 +82,6 @@ class DashboardPage(QDialog):
     self.page_title.setText("Clientes")
     self.search_input.show()
     self.search_btn.show()
-
 
   def on_sales_btn_1_toggled(self):
     self.stackedWidget.setCurrentIndex(4)

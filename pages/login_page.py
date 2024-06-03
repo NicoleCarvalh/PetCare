@@ -1,8 +1,7 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
-from PyQt5.QtGui import QFont, QFontDatabase
+from PyQt5.QtGui import *
 from PyQt5 import uic
-from PyQt5.QtGui import QKeyEvent
 from backend.endpoints.employees import verify_credentials
 from pages.dashboard_page import DashboardPage
 
@@ -24,7 +23,7 @@ class LoginPage(QDialog):
     # self.login_button.clicked.connect(self.login) 
     # self.email_input.returnPressed.connect(self.login)
     # self.password_input.returnPressed.connect(self.login)
-    # #maria.oliveira@example.com
+    # maria.oliveira@example.com
 
     self.loading_bar.setVisible(False)
   

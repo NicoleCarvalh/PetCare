@@ -1,7 +1,8 @@
-from datetime import datetime
 import os
 import requests
+from datetime import datetime
 from dotenv import load_dotenv
+from PyQt5.QtGui import QFont, QFontDatabase
 
 load_dotenv()
 api_key = os.getenv("API_KEY")
@@ -36,4 +37,5 @@ def check_status(quantity):
   elif quantity >= 10 or quantity == 0:
     product_status = "Esgotado"
     return product_status
+
 

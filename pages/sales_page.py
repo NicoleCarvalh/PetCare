@@ -1,11 +1,28 @@
 from PyQt5.QtWidgets import QTableWidgetItem, QPushButton, QMessageBox
-from PyQt5.QtGui import QIcon, QFont
+from PyQt5.QtGui import *
 from backend.routes import format_date, format_value
 from backend.endpoints.sales import get_sales_list
 
 sales_data = ''
 
 def populate_sales_table(self):
+  inter_font_path = 'resources/fonts/Inter/Inter.ttf'
+  montserrat_font_path = 'resources/fonts/Montserrat/static/Montserrat-Medium.ttf'
+  QFontDatabase.addApplicationFont(inter_font_path)
+  QFontDatabase.addApplicationFont(montserrat_font_path)
+
+  inter_font_family = 'Inter'
+  montserrat_font_family = 'MontserratM'
+
+  header_font = QFont(inter_font_family, 11)
+  header_font.setWeight(500)
+  text_font = QFont(montserrat_font_family, 11)
+
+  for i in range(6):
+    self.sales_table.horizontalHeaderItem(i).setFont(header_font) 
+
+  self.sales_table.setFont(text_font)
+
   def view_items(row):
     sale_id = int(self.sales_table.item(row, 0).text())
 
@@ -55,11 +72,12 @@ def populate_sales_table(self):
     self.sales_table.setItem(row, 4, QTableWidgetItem(str(sale['payment_method'])))
 
     btn_view_items = QPushButton("Ver Itens")
-    btn_font = QFont('Inter', 8)
+    btn_font = QFont('Inter', 9)
     btn_view_items.setFont(btn_font)
     btn_view_items.clicked.connect(lambda _, row=row: view_items(row))
     self.sales_table.setCellWidget(row, 5, btn_view_items)
     btn_view_items.setStyleSheet(
       "background-color: #F8E7BB;"
     )
+    self.sales_table.setRowHeight(row, 70)
 

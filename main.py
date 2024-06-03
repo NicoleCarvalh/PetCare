@@ -15,8 +15,9 @@ if __name__ == "__main__":
   window = LoginPage(widget)
 
   widget.addWidget(window)
-  widget.setFixedHeight(1000)
-  widget.setFixedWidth(1600)
+  # widget.setFixedHeight(1000)
+  # widget.setFixedWidth(1600)
+  widget.resize(1600, 950)
   widget.setWindowIcon(QIcon('resources/images/DesktopIcon.png'))
   widget.setWindowTitle("PetCare Connect")
   widget.show()
