@@ -24,7 +24,6 @@ class DashboardPage(QDialog):
     populate_clients_table(self)
     populate_sales_table(self)
 
-
   def keyPressEvent(self, event: QKeyEvent):
     if event.key() == Qt.Key_Escape:
       event.ignore()

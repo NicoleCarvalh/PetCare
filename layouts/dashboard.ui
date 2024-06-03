@@ -652,7 +652,7 @@ QPushButton#export_btn::hover {
 </string>
         </property>
         <property name="currentIndex">
-         <number>2</number>
+         <number>4</number>
         </property>
         <widget class="QWidget" name="dashboard">
          <property name="styleSheet">
@@ -829,22 +829,12 @@ QPushButton#export_btn::hover {
             </column>
             <column>
              <property name="text">
-              <string>Imagem</string>
-             </property>
-            </column>
-            <column>
-             <property name="text">
               <string>Nome Produto</string>
              </property>
             </column>
             <column>
              <property name="text">
-              <string>Descrição</string>
-             </property>
-            </column>
-            <column>
-             <property name="text">
-              <string>Qtd. em Estoque</string>
+              <string>Qtd. Estoque</string>
              </property>
             </column>
             <column>
@@ -865,6 +855,11 @@ QPushButton#export_btn::hover {
             <column>
              <property name="text">
               <string>Status Estoque</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Descrição</string>
              </property>
             </column>
            </widget>
@@ -905,11 +900,6 @@ QPushButton#export_btn::hover {
             <column>
              <property name="text">
               <string>ID</string>
-             </property>
-            </column>
-            <column>
-             <property name="text">
-              <string>Perfil</string>
              </property>
             </column>
             <column>
@@ -991,7 +981,7 @@ QPushButton#export_btn::hover {
              <bool>true</bool>
             </property>
             <attribute name="horizontalHeaderVisible">
-             <bool>false</bool>
+             <bool>true</bool>
             </attribute>
             <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
              <bool>true</bool>

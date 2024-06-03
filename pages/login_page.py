@@ -8,21 +8,6 @@ from pages.dashboard_page import DashboardPage
 
 #TODO adicionar links da página de login
 
-
-class WorkerThread(QThread):
-  finished = pyqtSignal(bool)  # Sinal para indicar que a tarefa foi concluída
-
-  def __init__(self, email, password):
-    super().__init__()
-    self.email = email
-    self.password = password
-
-  def run(self):
-    # Simular uma operação de verificação de credenciais
-    result = verify_credentials(self.email, self.password)
-    self.finished.emit(result)
-
-
 class LoginPage(QDialog):
   def __init__(self, widget):
     super(LoginPage, self).__init__()
@@ -35,7 +20,6 @@ class LoginPage(QDialog):
     self.login_button.clicked.connect(self.go_to_dashboard) 
     self.email_input.returnPressed.connect(self.go_to_dashboard)
     self.password_input.returnPressed.connect(self.go_to_dashboard)
-    self.settings = QSettings("Empresa", "MeuApp")
 
     # self.login_button.clicked.connect(self.login) 
     # self.email_input.returnPressed.connect(self.login)
@@ -79,66 +63,28 @@ class LoginPage(QDialog):
       self.validation_text.setText("Por favor, preencha todos os campos.")
       return
 
+    # Progress bar
     self.loading_bar.setVisible(True)
     self.loading_bar.setValue(0)
 
-    # stored_response = self.settings.value("api_response", defaultValue=False)
+    response = verify_credentials(email, password)
 
-    stored_email = self.settings.value("email")
-    stored_password = self.settings.value("password")
-
-    # Verificar se os dados da API estão armazenados e válidos
-    if stored_email is not None and stored_password is not None:
-      # Dados de login encontrados no armazenamento local, comparar com os fornecidos pelo usuário
-      if email == stored_email and password == stored_password:
-        # Login bem-sucedido localmente, ir para o dashboard
-        self.loading_bar.setVisible(False)
-        self.go_to_dashboard()
-        return
-      else:
-        # Login local falhou, fazer login na API
-        self.thread = WorkerThread(email, password)
-        self.thread.finished.connect(self.on_login_finished)
-        self.thread.start()
-    else:
-      # Não há dados de login armazenados localmente, fazer login na API
-      self.thread = WorkerThread(email, password)
-      self.thread.finished.connect(self.on_login_finished)
-      self.thread.start()
-
-  def verify_local_login(self, email, password):
-    # Recuperar os dados da resposta da API
-    stored_email = self.settings.value("email")
-    stored_password = self.settings.value("password")
-    expiration_date = self.settings.value("expiration_date")
-
-    # Verificar se os dados armazenados estão presentes e não expirados
-    if (stored_email == email and stored_password == password and expiration_date.isValid() and QDateTime.currentDateTime() < expiration_date):
-        # Os dados armazenados são válidos
-        return True
-    else:
-        # Os dados armazenados são inválidos ou expiraram
-        return False
-
-  def on_login_finished(self, result):
-    if result:
+    if response:
+      self.loading_bar.setValue(100)
       self.validation_text.setText('')
       self.email_input.clear()
       self.password_input.clear()
-      
-      # Armazenar os dados da resposta da API
-      self.settings.setValue("api_response", True)
-      
-      # Definir a data de expiração como 7 dias após o login
-      expiration_date = QDateTime.currentDateTime().addDays(7)
-      self.settings.setValue("expiration_date", expiration_date)
-      
       self.go_to_dashboard()
+
+      self.loading_bar.setValue(100)
+
+      # Hide progress bar
+      QTimer.singleShot(500, lambda: self.loading_bar.setVisible(False))
     else:
       self.validation_text.setText("E-mail ou senha incorretos.")
+      self.loading_bar.setVisible(False)
 
-    self.loading_bar.setVisible(False)
-
+  # Load Dashboard UI 
   def go_to_dashboard(self):
     dashboard = DashboardPage(self.widget)
     self.widget.addWidget(dashboard)

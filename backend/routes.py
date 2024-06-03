@@ -26,3 +26,14 @@ def format_value(value):
   formatted_value = "{:,.2f}".format(value).replace(",", "#").replace(".", ",").replace("#", ".")
   return f"R${formatted_value}"
 
+def check_status(quantity):
+  if quantity >= 30:
+    product_status = "Cheio"
+    return product_status
+  elif quantity < 30 and quantity > 10:
+    product_status = "Escasso"
+    return product_status
+  elif quantity >= 10 or quantity == 0:
+    product_status = "Esgotado"
+    return product_status
+
