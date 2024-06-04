@@ -18,6 +18,8 @@ def populate_sales_table(self):
   header_font.setWeight(500)
   text_font = QFont(montserrat_font_family, 11)
 
+  self.sales_table.horizontalHeader().setVisible(True)
+
   for i in range(6):
     self.sales_table.horizontalHeaderItem(i).setFont(header_font) 
 
@@ -72,8 +74,7 @@ def populate_sales_table(self):
     self.sales_table.setItem(row, 4, QTableWidgetItem(str(sale['payment_method'])))
 
     btn_view_items = QPushButton("Ver Itens")
-    btn_font = QFont('Inter', 9)
-    btn_view_items.setFont(btn_font)
+    btn_view_items.setFont(text_font)
     btn_view_items.clicked.connect(lambda _, row=row: view_items(row))
     self.sales_table.setCellWidget(row, 5, btn_view_items)
     btn_view_items.setStyleSheet(

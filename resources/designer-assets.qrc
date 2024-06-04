@@ -1,5 +1,9 @@
 <RCC>
   <qresource prefix="icons">
+    <file>icons/graph.svg</file>
+    <file>icons/user_plus.svg</file>
+    <file>icons/tag.svg</file>
+    <file>icons/report.svg</file>
     <file>icons/align-justify-on.svg</file>
     <file>icons/clipboard-list.svg</file>
     <file>icons/clipboard-list-on.svg</file>
