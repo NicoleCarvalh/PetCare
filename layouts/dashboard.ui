@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1592</width>
-    <height>1122</height>
+    <width>1596</width>
+    <height>1131</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -408,7 +408,7 @@ border-radius: 15px;</string>
          </font>
         </property>
         <property name="text">
-         <string>Dashboard</string>
+         <string>Dashboard &gt; Resumo diário</string>
         </property>
        </widget>
       </item>
@@ -726,7 +726,7 @@ border-radius: 16px;</string>
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset resource="../resources/designer-assets.qrc">
+                  <iconset>
                    <normaloff>../resources/icons/graph.svg</normaloff>../resources/icons/graph.svg</iconset>
                  </property>
                  <property name="iconSize">
@@ -757,7 +757,7 @@ border-radius: 16px;</string>
                  <property name="font">
                   <font>
                    <family>Poppins</family>
-                   <pointsize>10</pointsize>
+                   <pointsize>12</pointsize>
                   </font>
                  </property>
                  <property name="text">
@@ -770,7 +770,7 @@ border-radius: 16px;</string>
                  <property name="font">
                   <font>
                    <family>Poppins</family>
-                   <pointsize>9</pointsize>
+                   <pointsize>11</pointsize>
                   </font>
                  </property>
                  <property name="text">
@@ -878,7 +878,7 @@ border-radius: 16px;</string>
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset resource="../resources/designer-assets.qrc">
+                  <iconset>
                    <normaloff>../resources/icons/user_plus.svg</normaloff>../resources/icons/user_plus.svg</iconset>
                  </property>
                  <property name="iconSize">
@@ -909,7 +909,7 @@ border-radius: 16px;</string>
                  <property name="font">
                   <font>
                    <family>Poppins</family>
-                   <pointsize>10</pointsize>
+                   <pointsize>12</pointsize>
                   </font>
                  </property>
                  <property name="text">
@@ -922,7 +922,7 @@ border-radius: 16px;</string>
                  <property name="font">
                   <font>
                    <family>Poppins</family>
-                   <pointsize>9</pointsize>
+                   <pointsize>11</pointsize>
                   </font>
                  </property>
                  <property name="text">
@@ -1056,7 +1056,7 @@ border-radius: 16px;</string>
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset resource="../resources/designer-assets.qrc">
+                  <iconset>
                    <normaloff>../resources/icons/report.svg</normaloff>../resources/icons/report.svg</iconset>
                  </property>
                  <property name="iconSize">
@@ -1087,7 +1087,7 @@ border-radius: 16px;</string>
                  <property name="font">
                   <font>
                    <family>Poppins</family>
-                   <pointsize>10</pointsize>
+                   <pointsize>12</pointsize>
                   </font>
                  </property>
                  <property name="text">
@@ -1100,7 +1100,7 @@ border-radius: 16px;</string>
                  <property name="font">
                   <font>
                    <family>Poppins</family>
-                   <pointsize>9</pointsize>
+                   <pointsize>11</pointsize>
                   </font>
                  </property>
                  <property name="text">
@@ -1188,7 +1188,7 @@ border-radius: 16px;</string>
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset resource="../resources/designer-assets.qrc">
+                  <iconset>
                    <normaloff>../resources/icons/tag.svg</normaloff>../resources/icons/tag.svg</iconset>
                  </property>
                  <property name="iconSize">
@@ -1219,7 +1219,7 @@ border-radius: 16px;</string>
                  <property name="font">
                   <font>
                    <family>Poppins</family>
-                   <pointsize>10</pointsize>
+                   <pointsize>12</pointsize>
                   </font>
                  </property>
                  <property name="text">
@@ -1232,7 +1232,7 @@ border-radius: 16px;</string>
                  <property name="font">
                   <font>
                    <family>Poppins</family>
-                   <pointsize>9</pointsize>
+                   <pointsize>11</pointsize>
                   </font>
                  </property>
                  <property name="text">

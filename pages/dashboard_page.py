@@ -6,6 +6,7 @@ from pages.sales_page import populate_sales_table
 from pages.employees_page import populate_employees_table
 from pages.clients_page import populate_clients_table
 from pages.stock_page import populate_stock_table
+from pages.stats_page import populate_dashboard
 
 class DashboardPage(QDialog):
   def __init__(self, widget):
@@ -19,10 +20,11 @@ class DashboardPage(QDialog):
     self.exit_btn_1.clicked.connect(self.exit_to_login)
     self.exit_btn_2.clicked.connect(self.exit_to_login)
 
-    populate_employees_table(self)
-    populate_stock_table(self)
-    populate_clients_table(self)
-    populate_sales_table(self)
+    # populate_employees_table(self)
+    # populate_stock_table(self)
+    # populate_clients_table(self)
+    # populate_sales_table(self)
+    populate_dashboard(self)
 
   def keyPressEvent(self, event: QKeyEvent):
     if event.key() == Qt.Key_Escape:
