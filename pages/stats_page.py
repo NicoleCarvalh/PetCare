@@ -5,6 +5,8 @@ from backend.endpoints.sales import get_sales_list
 from datetime import datetime, timedelta
 from dateutil.parser import parse
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 # Consumir API e informar dados nos blocos 
 # Verificar gráficos
 
@@ -44,7 +46,7 @@ def sales_frame(self):
     else:
       percentage = 100
     
-    comparison = f'+ {percentage:.2f}% que ontem'
+    comparison = f'- {percentage:.2f}% que ontem'
     self.sales_comparison.setText(comparison)
     self.sales_comparison.setStyleSheet(
       "color: #A30D11;" 
@@ -54,7 +56,6 @@ def sales_frame(self):
     self.sales_comparison.setStyleSheet(
       "color: #CD6200;" 
     )
-  
   
   self.sales_count.setText(format_value(today_total))
 
@@ -66,7 +67,6 @@ def products_frame(self):
 
 def clients_frame(self):
   pass
-
 
 def populate_dashboard(self):
   sales_frame(self)
