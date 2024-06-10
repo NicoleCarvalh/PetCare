@@ -40,22 +40,23 @@ def sales_frame(self):
       "color: #4079ED;" 
     )
     
-  elif today_total < yesterday:
-    if yesterday_total != 0:
-      percentage = ((today_total - yesterday_total) / yesterday_total) * 100
-    else:
-      percentage = 100
-    
-    comparison = f'- {percentage:.2f}% que ontem'
-    self.sales_comparison.setText(comparison)
-    self.sales_comparison.setStyleSheet(
-      "color: #A30D11;" 
-    )
-  else:
+  elif today_total == yesterday_total:
     self.sales_comparison.setText('O mesmo que ontem')
     self.sales_comparison.setStyleSheet(
       "color: #CD6200;" 
     )
+  else:
+      if yesterday_total != 0:
+        percentage = ((today_total - yesterday_total) / yesterday_total) * 100
+      else:
+        percentage = 100
+      
+      comparison = f'{percentage:.2f}% que ontem'
+      self.sales_comparison.setText(comparison)
+      self.sales_comparison.setStyleSheet(
+        "color: #A30D11;" 
+      )
+
   
   self.sales_count.setText(format_value(today_total))
 

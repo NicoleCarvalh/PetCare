@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import *
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, QUrl
 from PyQt5 import uic
-from PyQt5.QtGui import QKeyEvent
+from PyQt5.QtGui import QKeyEvent, QDesktopServices
 from pages.sales_page import populate_sales_table
 from pages.employees_page import populate_employees_table
 from pages.clients_page import populate_clients_table
@@ -26,6 +26,8 @@ class DashboardPage(QDialog):
     # populate_sales_table(self)
     populate_dashboard(self)
 
+    self.export_btn.clicked.connect(self.open_pdf)
+
   def keyPressEvent(self, event: QKeyEvent):
     if event.key() == Qt.Key_Escape:
       event.ignore()
@@ -35,6 +37,10 @@ class DashboardPage(QDialog):
 
   def exit_to_login(self):
     self.widget.setCurrentIndex(0)
+
+  def open_pdf(self):
+    # generate_report()
+    QDesktopServices.openUrl(QUrl.fromLocalFile("report.pdf"))
 
 
   def on_dashboard_btn_1_toggled(self):
