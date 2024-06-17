@@ -4,9 +4,6 @@ from backend.routes import format_date, format_value
 from backend.routes import check_status
 from PyQt5.QtGui import *
 
-stock_data = ''
-product_status = ''
-
 def populate_stock_table(self):
   inter_font_path = 'resources/fonts/Inter/Inter.ttf'
   montserrat_font_path = 'resources/fonts/Montserrat/static/Montserrat-Medium.ttf'

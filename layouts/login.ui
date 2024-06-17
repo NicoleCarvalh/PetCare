@@ -561,7 +561,7 @@
   <tabstop>login_button</tabstop>
  </tabstops>
  <resources>
-  <include location="../resources/PetCareConnect.qrc"/>
+  <include location="../resourcesPetCareConnect.qrc"/>
  </resources>
  <connections/>
 </ui>

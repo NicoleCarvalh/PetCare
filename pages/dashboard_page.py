@@ -7,6 +7,7 @@ from pages.employees_page import populate_employees_table
 from pages.clients_page import populate_clients_table
 from pages.stock_page import populate_stock_table
 from pages.stats_page import populate_dashboard
+from layouts.report_layout import generate_pdf, fetch_report_data
 
 class DashboardPage(QDialog):
   def __init__(self, widget):
@@ -20,10 +21,10 @@ class DashboardPage(QDialog):
     self.exit_btn_1.clicked.connect(self.exit_to_login)
     self.exit_btn_2.clicked.connect(self.exit_to_login)
 
-    # populate_employees_table(self)
-    # populate_stock_table(self)
-    # populate_clients_table(self)
-    # populate_sales_table(self)
+    populate_employees_table(self)
+    populate_stock_table(self)
+    populate_clients_table(self)
+    populate_sales_table(self)
     populate_dashboard(self)
 
     self.export_btn.clicked.connect(self.open_pdf)
@@ -39,19 +40,21 @@ class DashboardPage(QDialog):
     self.widget.setCurrentIndex(0)
 
   def open_pdf(self):
-    # generate_report()
+    report_data = fetch_report_data()
+    generate_pdf(report_data, filename="report.pdf")
+
     QDesktopServices.openUrl(QUrl.fromLocalFile("report.pdf"))
 
 
   def on_dashboard_btn_1_toggled(self):
     self.stackedWidget.setCurrentIndex(0)
-    self.page_title.setText("Dashboard")
+    self.page_title.setText("Dashboard > Resumo diário")
     self.search_input.hide()
     self.search_btn.hide()
 
   def on_dashboard_btn_2_toggled(self):
     self.stackedWidget.setCurrentIndex(0)
-    self.page_title.setText("Dashboard")
+    self.page_title.setText("Dashboard > Resumo diário")
     self.search_input.hide()
     self.search_btn.hide()
 

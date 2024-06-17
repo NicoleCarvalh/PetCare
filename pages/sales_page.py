@@ -3,8 +3,6 @@ from PyQt5.QtGui import *
 from backend.routes import format_date, format_value
 from backend.endpoints.sales import get_sales_list
 
-sales_data = ''
-
 def populate_sales_table(self):
   inter_font_path = 'resources/fonts/Inter/Inter.ttf'
   montserrat_font_path = 'resources/fonts/Montserrat/static/Montserrat-Medium.ttf'

@@ -4,8 +4,6 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from backend.endpoints.employees import get_employees_list
 
-employees_data = ''
-
 def populate_employees_table(self):
   inter_font_path = 'resources/fonts/Inter/Inter.ttf'
   montserrat_font_path = 'resources/fonts/Montserrat/static/Montserrat-Medium.ttf'

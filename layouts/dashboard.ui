@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1596</width>
-    <height>1131</height>
+    <width>1585</width>
+    <height>1140</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -652,7 +652,7 @@ QPushButton#export_btn::hover {
 </string>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>3</number>
         </property>
         <widget class="QWidget" name="dashboard">
          <property name="styleSheet">
@@ -661,6 +661,12 @@ QPushButton#export_btn::hover {
          <layout class="QGridLayout" name="gridLayout_3">
           <item row="0" column="0">
            <widget class="QFrame" name="daily_sales_frame">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>200</height>
+             </size>
+            </property>
             <property name="styleSheet">
              <string notr="true">background-color: #FFE2E5;
 border-radius: 16px;</string>
@@ -682,8 +688,8 @@ border-radius: 16px;</string>
                </property>
                <property name="sizeHint" stdset="0">
                 <size>
-                 <width>10</width>
-                 <height>5</height>
+                 <width>13</width>
+                 <height>3</height>
                 </size>
                </property>
               </spacer>
@@ -701,7 +707,7 @@ border-radius: 16px;</string>
                  <property name="sizeHint" stdset="0">
                   <size>
                    <width>20</width>
-                   <height>10</height>
+                   <height>5</height>
                   </size>
                  </property>
                 </spacer>
@@ -710,7 +716,7 @@ border-radius: 16px;</string>
                 <widget class="QPushButton" name="pushButton">
                  <property name="maximumSize">
                   <size>
-                   <width>62</width>
+                   <width>65</width>
                    <height>16777215</height>
                   </size>
                  </property>
@@ -731,8 +737,8 @@ border-radius: 16px;</string>
                  </property>
                  <property name="iconSize">
                   <size>
-                   <width>65</width>
-                   <height>50</height>
+                   <width>55</width>
+                   <height>55</height>
                   </size>
                  </property>
                 </widget>
@@ -789,7 +795,7 @@ border-radius: 16px;</string>
                  <property name="sizeHint" stdset="0">
                   <size>
                    <width>20</width>
-                   <height>10</height>
+                   <height>5</height>
                   </size>
                  </property>
                 </spacer>
@@ -800,11 +806,11 @@ border-radius: 16px;</string>
            </widget>
           </item>
           <item row="2" column="0" colspan="4">
-           <widget class="QFrame" name="frame_4">
+           <widget class="QFrame" name="main_chart">
             <property name="minimumSize">
              <size>
               <width>0</width>
-              <height>450</height>
+              <height>410</height>
              </size>
             </property>
             <property name="styleSheet">
@@ -821,6 +827,12 @@ border-radius: 20px;</string>
           </item>
           <item row="0" column="3">
            <widget class="QFrame" name="daily_clients_frame">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>200</height>
+             </size>
+            </property>
             <property name="styleSheet">
              <string notr="true">background-color: rgb(193, 225, 254);
 border-radius: 16px;</string>
@@ -842,8 +854,8 @@ border-radius: 16px;</string>
                </property>
                <property name="sizeHint" stdset="0">
                 <size>
-                 <width>10</width>
-                 <height>5</height>
+                 <width>13</width>
+                 <height>3</height>
                 </size>
                </property>
               </spacer>
@@ -861,7 +873,7 @@ border-radius: 16px;</string>
                  <property name="sizeHint" stdset="0">
                   <size>
                    <width>20</width>
-                   <height>10</height>
+                   <height>5</height>
                   </size>
                  </property>
                 </spacer>
@@ -870,7 +882,7 @@ border-radius: 16px;</string>
                 <widget class="QPushButton" name="pushButton_4">
                  <property name="maximumSize">
                   <size>
-                   <width>62</width>
+                   <width>65</width>
                    <height>16777215</height>
                   </size>
                  </property>
@@ -883,8 +895,8 @@ border-radius: 16px;</string>
                  </property>
                  <property name="iconSize">
                   <size>
-                   <width>65</width>
-                   <height>50</height>
+                   <width>55</width>
+                   <height>55</height>
                   </size>
                  </property>
                 </widget>
@@ -913,7 +925,7 @@ border-radius: 16px;</string>
                   </font>
                  </property>
                  <property name="text">
-                  <string>Novos clientes</string>
+                  <string>Total de clientes</string>
                  </property>
                 </widget>
                </item>
@@ -925,8 +937,11 @@ border-radius: 16px;</string>
                    <pointsize>11</pointsize>
                   </font>
                  </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(64, 121, 237);</string>
+                 </property>
                  <property name="text">
-                  <string>TextLabel</string>
+                  <string>Ativos</string>
                  </property>
                 </widget>
                </item>
@@ -941,7 +956,7 @@ border-radius: 16px;</string>
                  <property name="sizeHint" stdset="0">
                   <size>
                    <width>20</width>
-                   <height>10</height>
+                   <height>5</height>
                   </size>
                  </property>
                 </spacer>
@@ -952,7 +967,7 @@ border-radius: 16px;</string>
            </widget>
           </item>
           <item row="4" column="2" colspan="2">
-           <widget class="QFrame" name="frame_7">
+           <widget class="QFrame" name="table_frame2">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(228, 246, 208);
 border-radius: 16px;</string>
@@ -963,6 +978,30 @@ border-radius: 16px;</string>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
+            <layout class="QGridLayout" name="gridLayout_9">
+             <item row="0" column="0">
+              <widget class="QTableWidget" name="table2">
+               <property name="font">
+                <font>
+                 <family>Poppins</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="editTriggers">
+                <set>QAbstractItemView::NoEditTriggers</set>
+               </property>
+               <property name="sortingEnabled">
+                <bool>true</bool>
+               </property>
+               <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+                <bool>true</bool>
+               </attribute>
+               <attribute name="verticalHeaderVisible">
+                <bool>false</bool>
+               </attribute>
+              </widget>
+             </item>
+            </layout>
            </widget>
           </item>
           <item row="1" column="0" colspan="4">
@@ -998,7 +1037,13 @@ border-radius: 16px;</string>
            </spacer>
           </item>
           <item row="0" column="1">
-           <widget class="QFrame" name="daily_stock_frame">
+           <widget class="QFrame" name="sales_mean_frame">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>200</height>
+             </size>
+            </property>
             <property name="styleSheet">
              <string notr="true">background-color: rgb(255, 244, 222);
 border-radius: 16px;</string>
@@ -1020,8 +1065,8 @@ border-radius: 16px;</string>
                </property>
                <property name="sizeHint" stdset="0">
                 <size>
-                 <width>10</width>
-                 <height>5</height>
+                 <width>13</width>
+                 <height>3</height>
                 </size>
                </property>
               </spacer>
@@ -1039,7 +1084,7 @@ border-radius: 16px;</string>
                  <property name="sizeHint" stdset="0">
                   <size>
                    <width>20</width>
-                   <height>10</height>
+                   <height>5</height>
                   </size>
                  </property>
                 </spacer>
@@ -1048,7 +1093,7 @@ border-radius: 16px;</string>
                 <widget class="QPushButton" name="pushButton_2">
                  <property name="maximumSize">
                   <size>
-                   <width>62</width>
+                   <width>65</width>
                    <height>16777215</height>
                   </size>
                  </property>
@@ -1061,14 +1106,14 @@ border-radius: 16px;</string>
                  </property>
                  <property name="iconSize">
                   <size>
-                   <width>65</width>
-                   <height>50</height>
+                   <width>55</width>
+                   <height>55</height>
                   </size>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="stock_count">
+                <widget class="QLabel" name="sales_mean_count">
                  <property name="font">
                   <font>
                    <family>Poppins</family>
@@ -1091,12 +1136,12 @@ border-radius: 16px;</string>
                   </font>
                  </property>
                  <property name="text">
-                  <string>Produtos em estoque</string>
+                  <string>Média de venda</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="stock_comparison">
+                <widget class="QLabel" name="label">
                  <property name="font">
                   <font>
                    <family>Poppins</family>
@@ -1104,7 +1149,7 @@ border-radius: 16px;</string>
                   </font>
                  </property>
                  <property name="text">
-                  <string>TextLabel</string>
+                  <string>Todas as vendas</string>
                  </property>
                 </widget>
                </item>
@@ -1119,7 +1164,7 @@ border-radius: 16px;</string>
                  <property name="sizeHint" stdset="0">
                   <size>
                    <width>20</width>
-                   <height>10</height>
+                   <height>5</height>
                   </size>
                  </property>
                 </spacer>
@@ -1131,6 +1176,12 @@ border-radius: 16px;</string>
           </item>
           <item row="0" column="2">
            <widget class="QFrame" name="daily_product_frame">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>200</height>
+             </size>
+            </property>
             <property name="styleSheet">
              <string notr="true">background-color: rgb(220, 252, 231);
 border-radius: 16px;</string>
@@ -1152,8 +1203,8 @@ border-radius: 16px;</string>
                </property>
                <property name="sizeHint" stdset="0">
                 <size>
-                 <width>10</width>
-                 <height>5</height>
+                 <width>13</width>
+                 <height>3</height>
                 </size>
                </property>
               </spacer>
@@ -1171,7 +1222,7 @@ border-radius: 16px;</string>
                  <property name="sizeHint" stdset="0">
                   <size>
                    <width>20</width>
-                   <height>10</height>
+                   <height>5</height>
                   </size>
                  </property>
                 </spacer>
@@ -1180,7 +1231,7 @@ border-radius: 16px;</string>
                 <widget class="QPushButton" name="pushButton_3">
                  <property name="maximumSize">
                   <size>
-                   <width>62</width>
+                   <width>65</width>
                    <height>16777215</height>
                   </size>
                  </property>
@@ -1193,8 +1244,8 @@ border-radius: 16px;</string>
                  </property>
                  <property name="iconSize">
                   <size>
-                   <width>65</width>
-                   <height>50</height>
+                   <width>55</width>
+                   <height>55</height>
                   </size>
                  </property>
                 </widget>
@@ -1236,7 +1287,7 @@ border-radius: 16px;</string>
                   </font>
                  </property>
                  <property name="text">
-                  <string>TextLabel</string>
+                  <string>Todas as categorias</string>
                  </property>
                 </widget>
                </item>
@@ -1251,7 +1302,7 @@ border-radius: 16px;</string>
                  <property name="sizeHint" stdset="0">
                   <size>
                    <width>20</width>
-                   <height>10</height>
+                   <height>5</height>
                   </size>
                  </property>
                 </spacer>
@@ -1262,7 +1313,7 @@ border-radius: 16px;</string>
            </widget>
           </item>
           <item row="4" column="0" colspan="2">
-           <widget class="QFrame" name="frame_5">
+           <widget class="QFrame" name="table_frame1">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(253, 222, 226);
 border-radius: 16px;</string>
@@ -1273,6 +1324,30 @@ border-radius: 16px;</string>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
+            <layout class="QGridLayout" name="gridLayout_8">
+             <item row="0" column="0">
+              <widget class="QTableWidget" name="table1">
+               <property name="font">
+                <font>
+                 <family>Poppins</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="editTriggers">
+                <set>QAbstractItemView::NoEditTriggers</set>
+               </property>
+               <property name="sortingEnabled">
+                <bool>true</bool>
+               </property>
+               <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+                <bool>true</bool>
+               </attribute>
+               <attribute name="verticalHeaderVisible">
+                <bool>false</bool>
+               </attribute>
+              </widget>
+             </item>
+            </layout>
            </widget>
           </item>
          </layout>
@@ -1512,7 +1587,7 @@ border-radius: 16px;</string>
             </column>
             <column>
              <property name="text">
-              <string>Idade</string>
+              <string>Data de Nascimento</string>
              </property>
             </column>
             <column>
@@ -1628,24 +1703,6 @@ border-radius: 16px;</string>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(255, 255, 255);</string>
          </property>
-         <widget class="QLabel" name="label_6">
-          <property name="geometry">
-           <rect>
-            <x>500</x>
-            <y>330</y>
-            <width>351</width>
-            <height>91</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>35</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>SEARCH TAB</string>
-          </property>
-         </widget>
         </widget>
        </widget>
       </item>
@@ -1672,19 +1729,6 @@ border-radius: 15px;</string>
         </property>
         <item>
          <spacer name="verticalSpacer_9">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <spacer name="verticalSpacer_12">
           <property name="orientation">
            <enum>Qt::Vertical</enum>
           </property>
