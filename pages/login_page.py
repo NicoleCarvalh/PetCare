@@ -52,7 +52,7 @@ class LoginPage(QDialog):
     self.validation_text.setText(" ")
 
     self.loading_bar.setVisible(True)
-    self.loading_bar.setValue(0)
+    self.loading_bar.setValue(50)
 
     if len(email) == 0 or len(password) == 0:
       self.validation_text.setText("Por favor, preencha todos os campos.")
@@ -65,7 +65,7 @@ class LoginPage(QDialog):
       self.validation_text.setText('')
       self.email_input.clear()
       self.password_input.clear()
-      self.loading_bar.setValue(100)
+      self.loading_bar.setValue(99)
       self.go_to_dashboard()
     else:
       self.validation_text.setText("E-mail ou senha incorretos.")

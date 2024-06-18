@@ -15,10 +15,15 @@ def sales_frame(self):
   plt.rcParams['font.family'] = 'Poppins'
 
   sales_data = get_sales_list()
-  
+
   sales_df = pd.DataFrame(sales_data)
   
   sales_df['date_time'] = pd.to_datetime(sales_df['date_time'])
+
+  products_data = get_products_list()
+
+  product_id_to_name = {product['id']: product['name'] for product in products_data}
+
   
   # Sales comparison 
   today = datetime.today().date()
@@ -94,20 +99,21 @@ def sales_frame(self):
 
   # Most sold products 
   top5_products_df = quantity_sold.nlargest(10, 'quantity')
-
   top5_products_df = top5_products_df.sort_values(by='quantity', ascending=False)
 
   self.table1.setRowCount(len(top5_products_df))
   self.table1.setColumnCount(2)
-  self.table1.setHorizontalHeaderLabels(['ID Produto', 'Quantidade Vendida'])
+  self.table1.setHorizontalHeaderLabels(['Nome do Produto', 'Quantidade Vendida'])
   self.table1.setColumnWidth(0, 320)
   self.table1.setColumnWidth(1, 320)
 
   for i, row in top5_products_df.iterrows():
-    product_id_item = QTableWidgetItem(str(row['product_id']))
+    product_name = product_id_to_name.get(row['product_id'], 'Desconhecido')
+    product_name_item = QTableWidgetItem(product_name)
     quantity_sold_item = QTableWidgetItem(str(row['quantity']))
-    self.table1.setItem(i, 0, product_id_item)  
-    self.table1.setItem(i, 1, quantity_sold_item)  
+    self.table1.setItem(i, 0, product_name_item)  
+    self.table1.setItem(i, 1, quantity_sold_item)
+
 
 
 def clients_frame(self):
@@ -129,10 +135,10 @@ def products_frame(self):
   self.table2.setRowCount(len(low_stock_df))
   self.table2.setColumnCount(4)
   self.table2.setHorizontalHeaderLabels(['ID Produto', 'Nome', 'Quantidade em Estoque', 'Última Reposição'])
-  self.table2.setColumnWidth(0, 100)
+  self.table2.setColumnWidth(0, 80)
   self.table2.setColumnWidth(1, 250)
-  self.table2.setColumnWidth(2, 150)
-  self.table2.setColumnWidth(3, 150)
+  self.table2.setColumnWidth(2, 200)
+  self.table2.setColumnWidth(3, 250)
 
   for i, row in enumerate(low_stock_df.itertuples(), start=0):
     product_id_item = QTableWidgetItem(str(row.id))

@@ -652,7 +652,7 @@ QPushButton#export_btn::hover {
 </string>
         </property>
         <property name="currentIndex">
-         <number>3</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="dashboard">
          <property name="styleSheet">
@@ -979,7 +979,7 @@ border-radius: 16px;</string>
              <enum>QFrame::Raised</enum>
             </property>
             <layout class="QGridLayout" name="gridLayout_9">
-             <item row="0" column="0">
+             <item row="1" column="0">
               <widget class="QTableWidget" name="table2">
                <property name="font">
                 <font>
@@ -999,6 +999,29 @@ border-radius: 16px;</string>
                <attribute name="verticalHeaderVisible">
                 <bool>false</bool>
                </attribute>
+               <column>
+                <property name="text">
+                 <string>teste</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_4">
+               <property name="font">
+                <font>
+                 <family>Poppins</family>
+                 <pointsize>9</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Produtos com baixo estoque</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
               </widget>
              </item>
             </layout>
@@ -1325,7 +1348,7 @@ border-radius: 16px;</string>
              <enum>QFrame::Raised</enum>
             </property>
             <layout class="QGridLayout" name="gridLayout_8">
-             <item row="0" column="0">
+             <item row="1" column="0">
               <widget class="QTableWidget" name="table1">
                <property name="font">
                 <font>
@@ -1345,6 +1368,29 @@ border-radius: 16px;</string>
                <attribute name="verticalHeaderVisible">
                 <bool>false</bool>
                </attribute>
+               <column>
+                <property name="text">
+                 <string>teste</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_3">
+               <property name="font">
+                <font>
+                 <family>Poppins</family>
+                 <pointsize>9</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Produtos mais vendidos</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
               </widget>
              </item>
             </layout>

@@ -4,10 +4,9 @@ from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, Image
 import matplotlib.pyplot as plt
-from backend.endpoints.clients import get_clients_list
 from backend.endpoints.products import get_products_list
 from backend.endpoints.sales import get_sales_list
-from backend.endpoints.employees import get_employees_list
+
 
 def fetch_report_data():
     sales_data = get_sales_list()
@@ -85,7 +84,7 @@ def generate_pdf(report_data, filename="report.pdf"):
     elements.append(Paragraph("Relatório de Vendas", styles['Title']))
 
     # Introdução
-    elements.append(Paragraph("Este relatório apresenta uma análise detalhada das vendas e desempenho dos produtos para o período selecionado.", styles['Normal']))
+    elements.append(Paragraph("Este relatório apresenta uma análise detalhada das vendas e desempenho dos produtos.", styles['Normal']))
     elements.append(Spacer(1, 12))
 
     # Resumo Executivo
@@ -130,25 +129,8 @@ def generate_pdf(report_data, filename="report.pdf"):
     elements.append(t)
     elements.append(Spacer(1, 12))
 
-    # Análise de Métodos de Pagamento
-    elements.append(Paragraph("Análise de Métodos de Pagamento", styles['Heading2']))
-    payment_data = [["Método de Pagamento", "Total Vendido"]]
-    for metodo in report_data['metodos_pagamento']:
-        payment_data.append([metodo['method'], f"R$ {metodo['total']:.2f}"])
-    t = Table(payment_data)
-    t.setStyle(TableStyle([('BACKGROUND', (0, 0), (-1, 0), colors.grey),
-                           ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
-                           ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
-                           ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
-                           ('FONTSIZE', (0, 0), (-1, 0), 12),
-                           ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
-                           ('BACKGROUND', (0, 1), (-1, -1), colors.beige),
-                           ('GRID', (0, 0), (-1, -1), 1, colors.black)]))
-    elements.append(t)
-    elements.append(Spacer(1, 12))
-
     # Gráfico de Exemplo
-    elements.append(Paragraph("Gráfico de Vendas", styles['Heading2']))
+    elements.append(Paragraph("Gráfico de Vendas Diárias", styles['Heading2']))
 
     # Gerar um gráfico com matplotlib
     buffer = io.BytesIO()
@@ -162,16 +144,75 @@ def generate_pdf(report_data, filename="report.pdf"):
     plt.grid(True)
     plt.savefig(buffer, format='PNG')
     buffer.seek(0)
-
+    
     # Adicionar gráfico ao PDF
     img = Image(buffer)
     elements.append(img)
     plt.close()
 
-    # Conclusões e Recomendações
-    elements.append(Paragraph("Conclusões e Recomendações", styles['Heading2']))
-    elements.append(Paragraph("Baseado nos dados apresentados, recomenda-se focar nos produtos mais vendidos e analisar a performance dos métodos de pagamento para otimizar as estratégias de vendas.", styles['Normal']))
+    elements.append(Spacer(1, 12))
+
+    # Gráfico de Vendas por Método de Pagamento
+    elements.append(Paragraph("Vendas por Método de Pagamento", styles['Heading2']))
+    buffer = io.BytesIO()
+    plt.figure(figsize=(6, 4))
+    methods = [data['method'] for data in report_data['metodos_pagamento']]
+    totals = [data['total'] for data in report_data['metodos_pagamento']]
+    plt.bar(methods, totals, color='skyblue')
+    plt.title('Vendas por Método de Pagamento')
+    plt.xlabel('Método de Pagamento')
+    plt.ylabel('Total de Vendas (R$)')
+    plt.xticks(rotation=45)
+    plt.grid(axis='y')
+    plt.tight_layout()
+    plt.savefig(buffer, format='PNG')
+    buffer.seek(0)
+
+    img = Image(buffer)
+    elements.append(img)
+    plt.close()
+
+    elements.append(Spacer(1, 12))
+
+    # Tabela de Métodos de Pagamento
+    elements.append(Paragraph("Tabela de Vendas por Método de Pagamento", styles['Heading2']))
+    payment_methods_data = [["Método de Pagamento", "Total de Vendas (R$)"]]
+    for method in report_data['metodos_pagamento']:
+        payment_methods_data.append([method['method'], f"R$ {method['total']:.2f}"])
+    t = Table(payment_methods_data)
+    t.setStyle(TableStyle([('BACKGROUND', (0, 0), (-1, 0), colors.grey),
+                           ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+                           ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+                           ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+                           ('FONTSIZE', (0, 0), (-1, 0), 12),
+                           ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+                           ('BACKGROUND', (0, 1), (-1, -1), colors.beige),
+                           ('GRID', (0, 0), (-1, -1), 1, colors.black)]))
+    elements.append(t)
+    elements.append(Spacer(1, 12))
+
+# Gráfico de Quantidade de Produtos Vendidos
+    elements.append(Paragraph("Quantidade de Produtos Vendidos", styles['Heading2']))
+    buffer = io.BytesIO()
+    plt.figure(figsize=(8, 4))  # Ajuste o tamanho conforme necessário
+    products = [produto['nome'] for produto in report_data['produtos_vendidos']]
+    quantities = [produto['quantidade'] for produto in report_data['produtos_vendidos']]
+    plt.bar(products, quantities, color='lightgreen')
+    plt.title('Quantidade de Produtos Vendidos')
+    plt.xlabel('Produto')
+    plt.ylabel('Quantidade Vendida')
+    plt.xticks(rotation=45, ha='right')  # Ajusta a rotação e alinhamento dos rótulos
+    plt.tight_layout()  # Melhora o espaçamento entre os elementos do gráfico
+    plt.subplots_adjust(bottom=0.4)  # Ajusta a margem inferior para evitar sobreposição dos rótulos
+    plt.savefig(buffer, format='PNG')
+    buffer.seek(0)
+
+    img = Image(buffer)
+    elements.append(img)
+    plt.close()
+
+    elements.append(Spacer(1, 12))
 
     # Construir o PDF
     doc.build(elements)
-    buffer.close()
+    print(f'Relatório gerado: {filename}')
