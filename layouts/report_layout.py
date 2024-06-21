@@ -194,7 +194,7 @@ def generate_pdf(report_data, filename="report.pdf"):
 # Gráfico de Quantidade de Produtos Vendidos
     elements.append(Paragraph("Quantidade de Produtos Vendidos", styles['Heading2']))
     buffer = io.BytesIO()
-    plt.figure(figsize=(8, 4))  # Ajuste o tamanho conforme necessário
+    plt.figure(figsize=(6, 4))  # Ajuste o tamanho conforme necessário
     products = [produto['nome'] for produto in report_data['produtos_vendidos']]
     quantities = [produto['quantidade'] for produto in report_data['produtos_vendidos']]
     plt.bar(products, quantities, color='lightgreen')
