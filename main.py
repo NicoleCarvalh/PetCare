@@ -4,8 +4,6 @@ from PyQt5 import QtWidgets
 from pages.login_page import LoginPage
 import sys
 
-#TODO CRIAR / INSERIR LOADER AO LOGAR
-
 # Initialize App
 if __name__ == "__main__":
   app = QApplication(sys.argv)
